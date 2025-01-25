@@ -20,7 +20,7 @@ require("lazy-lsp").setup({
     },
     
     on_attach = function(client, bufnr)
-      vim.bo[bufnr].omnifunc = vim.lsp.omnifunc
+      vim.bo[bufnr].omnifunc = vim.lsp.omnifunc()
 
       local opts = { noremap = true, buffer = bufnr }
 
