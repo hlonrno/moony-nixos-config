@@ -50,7 +50,7 @@
     isNormalUser = true;
     description = "Moony";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    packages = [];
   };
 
   environment.systemPackages = with pkgs; [
@@ -83,14 +83,14 @@
     libgcc
     unzip
 
-    (waybar.overrideAttrs (oldAttrs: {
-      mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-    }))
+    # (waybar.overrideAttrs (oldAttrs: {
+    #    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
+    # }))
   ];
 
   environment.variables.EDITOR = "nvim";
-  environment.variables.SUDO_EDITOR = "nvim";
   environment.sessionVariables = {
+    EDITOR = "nvim";
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
     PATH = [

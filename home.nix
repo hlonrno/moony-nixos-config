@@ -1,4 +1,4 @@
-{ config, pkgs, ... }@args: {  
+{ config, pkgs, ... }: {  
   home.stateVersion = "24.11";
   home.homeDirectory = "/home/moony";
 
@@ -15,14 +15,12 @@
 
   programs = {
     neovim = (import ./nvim/nvim.nix){ inherit pkgs; };
+    waybar = import ./waybar.nix;
 
     git-credential-oauth.enable = true;
     bash.enable = true;
     kitty.enable = true;
-
-    git = {
-      enable = true;
-    };
+    git.enable = true;
 
     gh = {
       enable = true;
