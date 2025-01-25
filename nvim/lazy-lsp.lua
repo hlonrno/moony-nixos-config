@@ -16,22 +16,22 @@ require("lazy-lsp").setup({
   prefer_local = true,
   default_config = {
     flags = {
-      debounce_text_changes = 100000,
+      debounce_text_changes = 100,
     },
     
     on_attach = function(client, bufnr)
-      vim.bo[bufnr].omnifunc = vim.lsp.omnifunc()
+      vim.bo[bufnr].omnifunc = vim.lsp.omnifunc
 
-      local opts = { noremap = true, buffer = bufnr }
+      local opts = { noremap = true }
 
-      vim.keymap.set('n', "<A-d>", vim.lsp.buf.definition(), opts)
-      vim.keymap.set('n', "<A-D>", vim.lsp.buf.declaration(), opts)
-      vim.keymap.set('n', "<A-.>", vim.lsp.buf.code_action(), opts)
-      vim.keymap.set('n', "<F2>", vim.lsp.buf.rename(), opts)
-      vim.keymap.set('n', "<A-r>", vim.lsp.buf.references(), opts)
-      vim.keymap.set('v', "<A-F>", vim.lsp.buf.formatexpr(), opts)
-      vim.keymap.set('n', "<A-i>", vim.lsp.buf.implementation(), opts)
-      vim.keymap.set('n', "<A-K>", vim.lsp.buf.document_symbol(), opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', "<A-d>", vim.lsp.buf.definition(), opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', "<A-D>", vim.lsp.buf.declaration(), opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', "<A-.>", vim.lsp.buf.code_action(), opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', "<F2>", vim.lsp.buf.rename(), opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', "<A-r>", vim.lsp.buf.references(), opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'v', "<A-F>", vim.lsp.buf.formatexpr(), opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', "<A-i>", vim.lsp.buf.implementation(), opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', "<A-K>", vim.lsp.buf.document_symbol(), opts)
     end,
     capabilities = require("cmp_nvim_lsp").default_capabilities(),
   },
