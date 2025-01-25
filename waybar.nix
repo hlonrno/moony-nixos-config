@@ -1,5 +1,5 @@
 {
-  enabled = true;
+  enable = true;
   settings = {
     mainBar = {
       layer = "top";
