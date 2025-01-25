@@ -87,6 +87,8 @@
     EDITOR = "nvim";
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
+    HYPRCURSOR_THEME = "Bibata-Modern-Ice";
+    HYPRCURSOR_SIZE = "24";
     PATH = [
       "/nix/store/gnf3mv68i5g6jmabnbbncsar3kbg13zd-gcc-14-20241116/bin"
     ];
