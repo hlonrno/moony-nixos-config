@@ -78,17 +78,11 @@
     brightnessctl
     hyprshot
     loupe
-    flatpak
     jdk23
     libgcc
     unzip
-
-    # (waybar.overrideAttrs (oldAttrs: {
-    #    mesonFlags = oldAttrs.mesonFlags ++ [ "-Dexperimental=true" ];
-    # }))
   ];
 
-  environment.variables.EDITOR = "nvim";
   environment.sessionVariables = {
     EDITOR = "nvim";
     NIXOS_OZONE_WL = "1";

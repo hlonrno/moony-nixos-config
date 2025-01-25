@@ -80,5 +80,62 @@
       name = "epic-mouse-v1";
       sensitivity = 1;
     };
+
+    bind = [
+      "SUPER, O, exec, pkill waybar"
+      "SUPER, P, exec, waybar"
+
+      "SUPER, T, exec, kitty"
+      "SUPER, Q, killactive, "
+      "SUPER, E, exec, nautilus"
+      "SUPER, F, togglefloating, "
+      "SUPER SHIFT, F, pseudo, "
+      "SUPER, G, togglesplit,  "
+      "SUPER, S, exec, wofi -Giw 4 --show drun"
+      "SUPER SHIFT, E, exec, wofi-emoji"
+      "SUPER, V, exec, pkill vivaldi; vivaldi"
+      "SUPER, H, movefocus, l"
+      "SUPER, L, movefocus, r"
+      "SUPER, K, movefocus, u"
+      "SUPER, J, movefocus, d"
+
+      "SUPER, 1, workspace, 1"
+      "SUPER, 2, workspace, 2"
+      "SUPER, 3, workspace, 3"
+      "SUPER, 4, workspace, 4"
+      "SUPER, 5, workspace, 5"
+      "SUPER, 6, workspace, 6"
+
+      "SUPER SHIFT, 1, movetoworkspace, 1"
+      "SUPER SHIFT, 2, movetoworkspace, 2"
+      "SUPER SHIFT, 3, movetoworkspace, 3"
+      "SUPER SHIFT, 4, movetoworkspace, 4"
+      "SUPER SHIFT, 5, movetoworkspace, 5"
+      "SUPER SHIFT, 6, movetoworkspace, 6"
+
+      "SUPER, SPACE, togglespecialworkspace, magic"
+      "SUPER SHIFT, SPACE, movetoworkspace, special:magic"
+
+      "SUPER, mouse_down, workspace, e+1"
+      "SUPER, mouse_up, workspace, e-1"
+
+      ", PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm region"
+      "SHIFT, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm output"
+      "CONTROL, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm window"
+
+      ", PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm region"
+      "SHIFT, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm output"
+      "CONTROL, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm window"
+    ];
+
+    bindm = [
+      "SUPER, mouse:272, movewindow"
+      "SUPER, mouse:273, resizewindow"
+    ];
+
+    windowrule = [
+      "suppressevent maximize, class:.*"
+      "float, title:^(SpeedCrunch)&"
+    ];
   };
 }
