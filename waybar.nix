@@ -11,6 +11,9 @@
 
       "hyprland/workspaces" = {
         max-length = 75;
+        persistent-workspaces = {
+          "*" = 6;
+        };
       };
 
       battery = {
