@@ -24,16 +24,16 @@ require("lazy-lsp").setup({
 
       local opts = { noremap = true }
 
-      vim..api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
-      vim..api.nvim_buf_set_keymap(bufnr, 'n', '<A-d>', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
-      vim..api.nvim_buf_set_keymap(bufnr, 'n', '<A-D>', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
-      vim..api.nvim_buf_set_keymap(bufnr, 'n', '<A-i>', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
-      vim..api.nvim_buf_set_keymap(bufnr, 'n', '<A-t>', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
-      vim..api.nvim_buf_set_keymap(bufnr, 'n', '<A-r>', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
-      vim..api.nvim_buf_set_keymap(bufnr, 'n', '<A-h>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
-      vim..api.nvim_buf_set_keymap(bufnr, 'n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-      vim..api.nvim_buf_set_keymap(bufnr, {'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
-      vim..api.nvim_buf_set_keymap(bufnr, 'n', '<A-.>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-d>', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-D>', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-i>', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-t>', '<cmd>lua vim.lsp.buf.type_definition()<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-r>', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-h>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, {'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-.>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
     end,
     capabilities = require("cmp_nvim_lsp").default_capabilities(),
   },
