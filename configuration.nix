@@ -89,11 +89,12 @@
   ];
 
   environment.variables.EDITOR = "nvim";
+  environment.variables.SUDO_EDITOR = "nvim";
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
     PATH = [
-      "/nix/store/gnf3mv68i5g6jmabnbbncsar3kbg13zd-gcc-14-20241116/bin/"
+      "/nix/store/gnf3mv68i5g6jmabnbbncsar3kbg13zd-gcc-14-20241116/bin"
     ];
   };
 
