@@ -18,8 +18,8 @@ require("lazy-lsp").setup({
     flags = {
       debounce_text_changes = 100,
     },
-    
-    on_attach = function(client, bufnr)
+
+    on_attach = function(_, bufnr)
       vim.bo[bufnr].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
       local opts = { noremap = true }
@@ -32,7 +32,7 @@ require("lazy-lsp").setup({
       vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-r>', '<cmd>lua vim.lsp.buf.references()<cr>', opts)
       vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-h>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
       vim.api.nvim_buf_set_keymap(bufnr, 'n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
-      vim.api.nvim_buf_set_keymap(bufnr, {'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
+      vim.api.nvim_buf_set_keymap(bufnr, 'n', '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
       vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-.>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
     end,
     capabilities = require("cmp_nvim_lsp").default_capabilities(),
