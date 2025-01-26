@@ -5,11 +5,7 @@
     exec-once = [
       "waybar"
       "hyprpaper"
-    ];
-    
-    env = [
-      "HYPRCURSOR_THEME, Bibata-Modern-Ice"
-      "HYPRCURSOR_SIZE, 24"
+      "hyprctl setcursor Bibata-Modern-Ice 24"
     ];
 
     decoration = {
