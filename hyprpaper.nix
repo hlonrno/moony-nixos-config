@@ -3,7 +3,7 @@
   settings = {
     ipc = "off";
     splash = false;
-    preload = [ "/etc/nixos/wallpaper.png" ];
-    wallpaper = [ "eDP-1,/etc/nixos/wallpaper.png" ];
+    preload = [ "~/Pictures/wallpaper.png" ];
+    wallpaper = [ "eDP-1,~/Pictures/wallpaper.png" ];
   };
 }
