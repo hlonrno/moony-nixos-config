@@ -90,7 +90,7 @@
       "SUPER, F, togglefloating, "
       "SUPER SHIFT, F, pseudo, "
       "SUPER, G, togglesplit, "
-      "SUPER, SHIFT, G, swapnext"
+      "SUPER SHIFT, G, swapnext"
       "SUPER, S, exec, wofi -Giw 4 --show drun"
       "SUPER SHIFT, E, exec, wofi-emoji"
       "SUPER, V, exec, pkill vivaldi; vivaldi"
