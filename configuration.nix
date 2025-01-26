@@ -55,32 +55,26 @@
 
   environment.systemPackages = with pkgs; [
     vivaldi
-    hyprpaper
     wl-clipboard
     libnotify
     dunst
     speedcrunch
     libsForQt5.qt5ct
-    obs-studio
-    blender
     ffmpeg
     mtpfs
     nautilus
     haruna
     wofi
     wofi-emoji
-    vesktop
     wlogout
     pavucontrol
     fastfetch
-    radeontop
-    hyprcursor
     brightnessctl
-    hyprshot
     loupe
     jdk23
     libgcc
     unzip
+    tree
   ];
 
   environment.sessionVariables = {

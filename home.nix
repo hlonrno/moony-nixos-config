@@ -8,17 +8,21 @@
 
   home.packages = with pkgs; [ ];
   wayland.windowManager.hyprland = import ./hypr.nix;
-  home.services.hyprpaper = import ./hyprpaper.nix;
+  services.hyprpaper = import ./hyprpaper.nix;
 
-  home.file.".config/haruna/haruna.conf".text = ''
-    [Audio]
-    Volume=70
+  home.file = {
+    ".config/haruna/haruna.conf".text = ''
+      [Audio]
+      Volume=70
 
-    [General]
-    ColorScheme=Breeze Dark
-    GuiStyle=Breeze
-    UseBreezeIconTheme=true
-  '';
+      [General]
+      ColorScheme=Breeze Dark
+      GuiStyle=Breeze
+      UseBreezeIconTheme=true
+    '';
+    ".config/SpeedCrunch/SpeedCrunch.ini".source = ./speedcrunch.ini;
+  }
+  
 
   programs = {
     neovim = (import ./nvim/nvim.nix){ inherit pkgs; };
