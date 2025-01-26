@@ -11,6 +11,7 @@
     blender
     vesktop
     radeontop
+    hyprpaper
   ];
 
   wayland.windowManager.hyprland = import ./hypr.nix;
