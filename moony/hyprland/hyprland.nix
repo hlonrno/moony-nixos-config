@@ -125,10 +125,6 @@
       ", PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm region"
       "SHIFT, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm output"
       "CONTROL, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm window"
-
-      ", PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm region"
-      "SHIFT, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm output"
-      "CONTROL, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm window"
     ];
 
     bindm = [
