@@ -27,7 +27,7 @@
   };
 
   services.xserver.enable = true;
-  #services.displayManager.autoLogin = { enable = true; user = "moony"; };
+  services.displayManager.autoLogin = { enable = true; user = "moony"; };
   services.libinput.enable = false;
   services.xserver.xkb = {
     layout = "us";
@@ -81,8 +81,6 @@
     EDITOR = "nvim";
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
-    HYPRCURSOR_THEME = "Bibata-Modern-Ice";
-    HYPRCURSOR_SIZE = "24";
     PATH = [
       "/nix/store/gnf3mv68i5g6jmabnbbncsar3kbg13zd-gcc-14-20241116/bin"
     ];

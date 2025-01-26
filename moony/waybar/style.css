@@ -3,10 +3,6 @@
     font-family: sans-serif;
 }
 
-.waybar {
-    background-color: transparent;
-}
-
 #backlight-slider {
     min-width: 50px;
 }
@@ -51,4 +47,8 @@
     transition-property: background-color;
     transition-duration: 0.25s;
     background-color: rgba(250, 250, 250, 1);
+}
+
+.waybar {
+    background-color: transparent;
 }
