@@ -6,7 +6,13 @@
     EDITOR = "nvim";
   };
 
-  home.packages = with pkgs; [ ];
+  home.packages = with pkgs; [
+    obs-studio
+    blender
+    vesktop
+    radeontop
+  ];
+
   wayland.windowManager.hyprland = import ./hypr.nix;
   services.hyprpaper = import ./hyprpaper.nix;
 
@@ -20,8 +26,7 @@
       GuiStyle=Breeze
       UseBreezeIconTheme=true
     '';
-    ".config/SpeedCrunch/SpeedCrunch.ini".source = ./speedcrunch.ini;
-  }
+  };
   
 
   programs = {
