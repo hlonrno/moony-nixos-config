@@ -54,5 +54,5 @@
     };
   };
 
-  style = ./waybar-style.css;
+  style = ./style.css;
 }
