@@ -9,13 +9,20 @@ in
     viAlias = true;
     vimAlias = true;
     vimdiffAlias = true;
-  
+
     extraLuaConfig = builtins.readFile ./init.lua;
 
     plugins = with pkgs.vimPlugins; [
       {
         plugin = catppuccin-nvim;
-        config = "colorscheme catppuccin-mocha";
+        config = ''
+          augroup user_colors
+            autocmd!
+            autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
+          augroup END
+
+          colorscheme catppuccin-mocha
+        '';
       }
       {
         plugin = nvim-treesitter.withPlugins (p: [
