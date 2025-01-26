@@ -30,15 +30,15 @@ in
           p.tree-sitter-markdown
           p.tree-sitter-markdown-inline
         ]);
-        config = toLuaFile ./treesitter.lua;
+        config = toLuaFile ./plugins/treesitter.lua;
       }
       {
         plugin = nvim-cmp;
-        config = toLuaFile ./nvim-lsp.lua;
+        config = toLuaFile ./plugins/nvim-lsp.lua;
       }
       {
         plugin = lazy-lsp-nvim;
-        config = toLuaFile ./lazy-lsp.lua;
+        config = toLuaFile ./plugins/lazy-lsp.lua;
       }
       {
         plugin = undotree;
@@ -50,15 +50,15 @@ in
       }
       {
         plugin = trouble-nvim;
-        config = toLuaFile ./trouble.lua;
+        config = toLuaFile ./plugins/trouble.lua;
       }
       {
         plugin = todo-comments-nvim;
-        config = toLuaFile ./todo-comments.lua;
+        config = toLuaFile ./plugins/todo-comments.lua;
       }
       {
         plugin = nvim-tree-lua;
-        config = toLuaFile ./nvim-tree.lua;
+        config = toLuaFile ./plugins/nvim-tree.lua;
       }
 
       vim-fugitive

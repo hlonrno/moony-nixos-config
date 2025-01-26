@@ -6,21 +6,22 @@
       position = "top";
       spacing = 7;
       modules-left = [ "hyprland/workspaces" "hyprland/window" ];
-      modules-center = [ "clock" ];
-      modules-right = [ "backlight/slider" "pulseaudio" "battery" "network" "custom/power" ];
+      modules-center = [ ];
+      modules-right = [ "clock" "backlight/slider" "pulseaudio" "battery" "network" "custom/power" ];
 
       "hyprland/workspaces" = {
         max-length = 75;
         persistent-workspaces = {
           "*" = 6;
         };
+        format = "";
       };
 
       battery = {
         state = {
           full = 100;
           warning = 35;
-          critical = 15;
+          critical = 16;
         };
 
         format-full = "";
@@ -36,7 +37,7 @@
 
       clock = {
         format = "{:%H:%M}";
-        format-alt = "{:%a, %d, %b  %H:%M}";
+        format-alt = "{:%a, %d %b  %H:%M}";
       };
 
       network = {

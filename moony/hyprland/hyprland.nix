@@ -6,6 +6,11 @@
       "waybar"
       "hyprpaper"
     ];
+    
+    env = [
+      "HYPRCURSOR_THEME, Bibata-Modern-Ice"
+      "HYPRCURSOR_SIZE, 24"
+    ];
 
     decoration = {
       rounding = 5;
@@ -42,9 +47,8 @@
     };
 
     misc = {
-      force_default_wallpaper = -1;
+      force_default_wallpaper = 0;
       disable_hyprland_logo = true;
-      vfr = true;
       new_window_takes_over_fullscreen = 2;
     };
 

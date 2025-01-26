@@ -16,7 +16,7 @@
   in {
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       modules = [
-	./configuration.nix
+	./moony/configuration.nix
 	inputs.home-manager.nixosModules.default
       ];
     };
