@@ -10,6 +10,7 @@
     aliases = {
       pc = "pr checkout";
       pv = "pr view";
+      rv = "repo view";
     };
   };
 }
