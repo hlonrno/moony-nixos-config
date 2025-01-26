@@ -4,17 +4,15 @@
     mainBar = {
       layer = "top";
       position = "top";
-      spacing = 7;
       modules-left = [ "hyprland/workspaces" "hyprland/window" ];
       modules-center = [ ];
-      modules-right = [ "clock" "backlight/slider" "pulseaudio" "battery" "network" "custom/power" ];
+      modules-right = [ "" "backlight" "pulseaudio" "clock" "custom/power" ];
 
       "hyprland/workspaces" = {
-        max-length = 75;
+        format = "";
         persistent-workspaces = {
           "*" = 6;
         };
-        format = "";
       };
 
       battery = {
@@ -24,7 +22,6 @@
           critical = 16;
         };
 
-        format-full = "";
         format-warning = "{capacity}% charge soon.";
         format-critical = "{capacity}% CHARGE NOW!";
         format = "{capacity%} charge";
