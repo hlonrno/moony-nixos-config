@@ -112,11 +112,11 @@
       "SUPER SHIFT, 4, movetoworkspace, 4"
       "SUPER SHIFT, 5, movetoworkspace, 5"
 
-      "SUPER `, 1, movetoworkspacesilent, 1"
-      "SUPER `, 2, movetoworkspacesilent, 2"
-      "SUPER `, 3, movetoworkspacesilent, 3"
-      "SUPER `, 4, movetoworkspacesilent, 4"
-      "SUPER `, 5, movetoworkspacesilent, 5"
+      "SUPER X, 1, movetoworkspacesilent, 1"
+      "SUPER X, 2, movetoworkspacesilent, 2"
+      "SUPER X, 3, movetoworkspacesilent, 3"
+      "SUPER X, 4, movetoworkspacesilent, 4"
+      "SUPER X, 5, movetoworkspacesilent, 5"
 
       "SUPER, SPACE, togglespecialworkspace, magic"
       "SUPER SHIFT, SPACE, movetoworkspace, special:magic"

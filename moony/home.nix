@@ -8,9 +8,10 @@
     blender
     vesktop
     radeontop
-    hyprpaper
+#    hyprpaper
     hyprcursor
     hyprshot
+    hyprpicker
     bibata-cursors
   ];
 
@@ -23,6 +24,8 @@
     waybar = import ./waybar/waybar.nix;
     kitty = import ./kitty/kitty.nix;
     gh = import ./git/gh.nix;
+    hyprlock = import ./hyprland/hyprlock.nix;
+    hypridle = import ./hyprland/hypridle.nix;
 
     git-credential-oauth.enable = true;
     bash.enable = true;
