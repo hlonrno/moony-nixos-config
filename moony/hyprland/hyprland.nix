@@ -6,6 +6,8 @@
       "waybar"
       "hyprpaper"
       "hyprctl setcursor Bibata-Modern-Ice 24"
+      "hypridle"
+      "systemctl --user start hyprpolkitagent"
     ];
 
     decoration = {
@@ -91,7 +93,7 @@
       "SUPER SHIFT, F, pseudo, "
       "SUPER, G, togglesplit, "
       "SUPER SHIFT, G, swapnext"
-      "SUPER, S, exec, wofi -Giw 4 --show drun"
+      "SUPER, S, exec, wofi -Gi --show drun"
       "SUPER SHIFT, E, exec, wofi-emoji"
       "SUPER, V, exec, pkill vivaldi; vivaldi"
       "SUPER, Z, pin, active"
@@ -112,21 +114,12 @@
       "SUPER SHIFT, 4, movetoworkspace, 4"
       "SUPER SHIFT, 5, movetoworkspace, 5"
 
-      "SUPER X, 1, movetoworkspacesilent, 1"
-      "SUPER X, 2, movetoworkspacesilent, 2"
-      "SUPER X, 3, movetoworkspacesilent, 3"
-      "SUPER X, 4, movetoworkspacesilent, 4"
-      "SUPER X, 5, movetoworkspacesilent, 5"
-
       "SUPER, SPACE, togglespecialworkspace, magic"
       "SUPER SHIFT, SPACE, movetoworkspace, special:magic"
 
-      "SUPER, mouse_down, workspace, e+1"
-      "SUPER, mouse_up, workspace, e-1"
-
-      ", PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm region"
-      "SHIFT, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm output"
-      "CONTROL, PRINT, exec, hyprshot -o ~/Pictures/Screenshots -sm window"
+      ", PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm region"
+      "SHIFT, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm output"
+      "CONTROL, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm window"
     ];
 
     bindm = [
