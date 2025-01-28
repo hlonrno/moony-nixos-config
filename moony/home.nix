@@ -9,7 +9,7 @@
     vesktop
     radeontop
     hyprcursor
-    hypapaper
+    hyprpaper
     hypridle
     hyprshot
     hyprpicker
