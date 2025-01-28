@@ -1,5 +1,5 @@
 {
-  enable = false;
+  enable = true;
   settings = {
     general = {
       grace = 0.5;
