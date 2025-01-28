@@ -6,30 +6,44 @@
       position = "top";
       modules-left = [ "hyprland/workspaces" "hyprland/window" ];
       modules-center = [ ];
-      modules-right = [ "" "backlight" "pulseaudio" "clock" "custom/power" ];
-
-      "hyprland/workspaces" = {
-        format = "";
-        persistent-workspaces = {
-          "*" = 6;
-        };
+      modules-right = [ "clock" "group/wireless" "group/scrollable" "group/meta" "group/power" ];
+      
+      "group/wireless" = {
+        orientation = "inherit";
+        modules = [
+          "network"
+          "bluetooth"
+        ];
       };
 
-      battery = {
-        state = {
-          full = 100;
-          warning = 35;
-          critical = 16;
-        };
-
-        format-warning = "{capacity}% charge soon.";
-        format-critical = "{capacity}% CHARGE NOW!";
-        format = "{capacity%} charge";
+      "group/scrollable" = {
+        orientation = "inherit";
+        modules = [
+          "pulseaudio"
+          "backlight"
+        ];
       };
 
-      pulseaudio = {
-        on-click = "pavucontrol";
-        format = "{volume}% volume";
+      "group/meta" = {
+        orientation = "inherit";
+        modules = [
+          "privacy"
+          "battery"
+        ];
+      };
+
+      "group/power" = {
+        orientation = "inherit";
+        modules = [
+          "custom/wlogout"
+          "custom/poweroff"
+          "custom/reboot"
+        ];
+
+        drawer = {
+          transition = 300;
+          transition-left-to-right = false;
+        };
       };
 
       clock = {
@@ -37,16 +51,78 @@
         format-alt = "{:%a, %d %b  %H:%M}";
       };
 
+      "hyprland/workspaces" = {
+        format = "";
+        persistent-workspaces = {
+          "*" = 5;
+        };
+      };
+
       network = {
-        format-wifi = "WiFI {signalStrength}%";
-        format-disconnected = "Disconnected";
-        format-ethernet = "Ethernet";
+        format-ethernet = "Eth.";
+        format-wifi = "WiFi";
+        format-disconnected = "";
         tooltip-format = "{essid}";
       };
 
-      "custom/power" = {
+      bluetooth = {
+        format = "BL {status}";
+        # format-disabled = "";
+        format-connected = "BL {num_connections} connected";
+        tooltip-format = "{controller_alias}";
+        tooltip-format-connected = "{controller_alias}\n{device_enumerate}";
+        tooltip-format-enumerate-connected = "{device_alias}";
+
+        on-click = "bluetoothctl power off";
+        on-click-right = "bluetoothctl power on";
+      };
+
+      pulseaudio = {
+        on-click = "pavucontrol";
+        format = "{volume}vol";
+        format-bluetooth = "BL {volume}vol";
+        tooltip-format = "{desc}";
+      };
+
+      backlight = {
+        format = "{percent}nits";
+        on-scroll-up = "brightnessctl s +10";
+        on-scroll-down = "brightnessctl s 10-";
+      };
+
+      privacy = {
+        modules = [
+          { type = "screenshare"; tooltip = false; }
+          { type = "audio-in"; tooltip = false; }
+        ];
+      };
+
+      battery = {
+        states = {
+          good = 100;
+          warning = 30;
+          critical = 15;
+        };
+
+        format = "{capacity}%";
+        format-plugged = "{capacity}% P";
+        format-good = "";
+        tooltip-format = "{time}";
+      };
+
+      "custom/wlogout" = {
         format = "⏻";
         on-click = "wlogout";
+      };
+
+      "custom/poweroff" = {
+        format = "O";
+        on-click = "poweroff";
+      };
+
+      "custom/reboot" = {
+        format = "R";
+        on-click = "reboot";
       };
     };
   };

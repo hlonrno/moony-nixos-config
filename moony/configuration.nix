@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }@inputs: {
   imports = [
       ./hardware-configuration.nix
@@ -10,8 +6,13 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.networkmanager.enable = true;
-  networking.hostName = "nixos";
+  networking = {
+    networkmanager.enable = true;
+    hostName = "nixos";
+    firewall.allowedTCPPorts = [ 83 443 22 21 ];
+    firewall.allowedUDPPorts = [ ];
+  };
+
   time.timeZone = "Europe/Sofia";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
@@ -26,25 +27,36 @@
     LC_TIME = "bg_BG.UTF-8";
   };
 
-  services.xserver.enable = true;
-  services.displayManager.autoLogin = { enable = true; user = "moony"; };
-  services.libinput.enable = false;
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-  services.printing.enable = true;
+  services = {
+    libinput.enable = false;
+    pulseaudio.enable = false;
+    xserver.enable = true;
+    printing.enable = true;
+    blueman.enable = true;
+    openssh.enable = true;
+    flatpak.enable = true;
+    
+    displayManager.autoLogin = { enable = true; user = "moony"; };
 
-  hardware.bluetooth.enable = true;
-  hardware.graphics.enable = true;
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
+    xserver.xkb = {
+      layout = "us";
+      variant = "";
+    };
+    
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
   };
+  
+  hardware = {
+    bluetooth.enable = true;
+    graphics.enable = true;
+  };
+
+  security.rtkit.enable = true;
 
   users.users.moony = {
     isNormalUser = true;
@@ -75,6 +87,8 @@
     libgcc
     unzip
     tree
+    font-awesome
+    bluez
   ];
 
   environment.sessionVariables = {
@@ -92,15 +106,12 @@
     users.moony = import ./home.nix;
   };
 
-  programs.hyprland = { enable = true; xwayland.enable = true; };
-  programs.mtr.enable = true;
-  programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
+  programs = {
+    hyprland = { enable = true; xwayland.enable = true; };
+    mtr.enable = true;
+    gnupg.agent = { enable = true; enableSSHSupport = true; };
+  };
 
-  services.openssh.enable = true;
-  services.flatpak.enable = true;
-
-  networking.firewall.allowedTCPPorts = [ 83 443 22 21 ];
-  networking.firewall.allowedUDPPorts = [ ];
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
