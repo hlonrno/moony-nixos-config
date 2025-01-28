@@ -20,7 +20,7 @@ window#waybar {
 #bluetooth,
 #language,
 #workspaces {
-  padding: 0px 5px 0px 5px;
+  padding: 0px 5px;
   border-radius: 7px;
   background-color: rgb(50, 50, 50);
 }
@@ -54,17 +54,19 @@ window#waybar.empty #window {
 }
 
 #workspaces button {
+  margin: 0px 2px;
+  padding: 0px 4px;
   transition-property: background-color;
   transition-duration: 0.25s;
   background-color: rgb(70, 70, 70);
 }
 
 #workspaces button.empty {
-  background-color: rgba(50, 50, 50, 0.8);
+  background-color: rgba(50, 50, 50, 0.5);
 }
 
 #workspaces button.active {
-  background-color: rgb(110, 110, 110);
+  background-color: rgb(115, 115, 115);
 }
 
 @keyframes blink {
