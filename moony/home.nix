@@ -8,16 +8,20 @@
     blender
     vesktop
     radeontop
-#    hyprpaper
     hyprcursor
     hyprshot
     hyprpicker
+    hyprpolkitagent
     bibata-cursors
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix;
-  services.hyprpaper = import ./hyprland/hyprpaper.nix;
   home.file = import ./files/main.nix;
+
+  services = {
+    hyprpaper = import ./hyprland/hyprpaper.nix;
+    hypridle = import ./hyprland/hypridle.nix;
+  };
 
   programs = {
     neovim = import ./neovim/nvim.nix { inherit pkgs; };
@@ -25,7 +29,6 @@
     kitty = import ./kitty/kitty.nix;
     gh = import ./git/gh.nix;
     hyprlock = import ./hyprland/hyprlock.nix;
-    hypridle = import ./hyprland/hypridle.nix;
 
     git-credential-oauth.enable = true;
     bash.enable = true;

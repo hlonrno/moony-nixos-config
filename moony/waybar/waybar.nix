@@ -4,47 +4,14 @@
     mainBar = {
       layer = "top";
       position = "top";
+      spacing = 7;
+      margin-top = 2;
+      margin-left = 4;
+      margin-right = 4;
+
       modules-left = [ "hyprland/workspaces" "hyprland/window" ];
       modules-center = [ ];
-      modules-right = [ "clock" "group/wireless" "group/scrollable" "group/meta" "group/power" ];
-      
-      "group/wireless" = {
-        orientation = "inherit";
-        modules = [
-          "network"
-          "bluetooth"
-        ];
-      };
-
-      "group/scrollable" = {
-        orientation = "inherit";
-        modules = [
-          "pulseaudio"
-          "backlight"
-        ];
-      };
-
-      "group/meta" = {
-        orientation = "inherit";
-        modules = [
-          "privacy"
-          "battery"
-        ];
-      };
-
-      "group/power" = {
-        orientation = "inherit";
-        modules = [
-          "custom/wlogout"
-          "custom/poweroff"
-          "custom/reboot"
-        ];
-
-        drawer = {
-          transition = 300;
-          transition-left-to-right = false;
-        };
-      };
+      modules-right = [ "clock" "network" "bluetooth" "pulseaudio" "backlight" "battery" "hyprland/language" "privacy" "custom/wlogout" ];
 
       clock = {
         format = "{:%H:%M}";
@@ -58,6 +25,10 @@
         };
       };
 
+      "hyprland/window" = {
+        max-length = 125;
+      };
+
       network = {
         format-ethernet = "Eth.";
         format-wifi = "WiFi";
@@ -67,8 +38,8 @@
 
       bluetooth = {
         format = "BL {status}";
-        # format-disabled = "";
-        format-connected = "BL {num_connections} connected";
+        format-disabled = "";
+        format-connected = "BL {num_connections} on";
         tooltip-format = "{controller_alias}";
         tooltip-format-connected = "{controller_alias}\n{device_enumerate}";
         tooltip-format-enumerate-connected = "{device_alias}";
@@ -80,17 +51,25 @@
       pulseaudio = {
         on-click = "pavucontrol";
         format = "{volume}vol";
-        format-bluetooth = "BL {volume}vol";
+        format-bluetooth = "{volume}vol (BL)";
         tooltip-format = "{desc}";
       };
 
       backlight = {
-        format = "{percent}nits";
-        on-scroll-up = "brightnessctl s +10";
-        on-scroll-down = "brightnessctl s 10-";
+        format = "{percent}sun";
+#        on-scroll-up = "brightnessctl s +10";
+#        on-scroll-down = "brightnessctl s 10-";
+      };
+
+
+      "hyprland/language" = {
+        format = "{}";
+        format-bg = "БГ";
+        format-en = "EN";
       };
 
       privacy = {
+        icon-size = 14;
         modules = [
           { type = "screenshare"; tooltip = false; }
           { type = "audio-in"; tooltip = false; }
@@ -106,23 +85,13 @@
 
         format = "{capacity}%";
         format-plugged = "{capacity}% P";
-        format-good = "";
+        # format-good = "";
         tooltip-format = "{time}";
       };
 
       "custom/wlogout" = {
         format = "⏻";
         on-click = "wlogout";
-      };
-
-      "custom/poweroff" = {
-        format = "O";
-        on-click = "poweroff";
-      };
-
-      "custom/reboot" = {
-        format = "R";
-        on-click = "reboot";
       };
     };
   };
