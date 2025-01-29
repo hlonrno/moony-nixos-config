@@ -38,7 +38,7 @@
 
       bluetooth = {
         format = "BL {status}";
-        format-disabled = "";
+        format-disabled = "BL off";
         format-connected = "BL {num_connections} on";
         tooltip-format = "{controller_alias}";
         tooltip-format-connected = "{controller_alias}\n{device_enumerate}";
