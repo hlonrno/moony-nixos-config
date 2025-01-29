@@ -31,6 +31,7 @@
     kitty = import ./kitty/kitty.nix;
     gh = import ./git/gh.nix;
     hyprlock = import ./hyprland/hyprlock.nix;
+    wofi = import ./wofi/wofi.nix;
 
     git-credential-oauth.enable = true;
     bash.enable = true;

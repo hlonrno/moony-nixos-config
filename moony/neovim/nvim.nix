@@ -68,6 +68,7 @@ in
         config = toLuaFile ./plugins/nvim-tree.lua;
       }
 
+      vim-visual-multi
       vim-fugitive
       cmp-nvim-lsp
       nvim-lspconfig
