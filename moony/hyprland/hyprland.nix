@@ -8,6 +8,7 @@
       "hyprctl setcursor Bibata-Modern-Ice 24"
       "hypridle"
       "systemctl --user start hyprpolkitagent"
+      "rfkill unblock bluetooth"
     ];
 
     decoration = {
