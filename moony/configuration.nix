@@ -84,12 +84,10 @@
     brightnessctl
     loupe
     jdk23
-    libgcc
     unzip
     tree
     font-awesome
     bluez
-    gcc
   ];
 
   environment.sessionVariables = {
