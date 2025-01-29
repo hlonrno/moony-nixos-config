@@ -57,8 +57,8 @@
 
       backlight = {
         format = "{percent}sun";
-#        on-scroll-up = "brightnessctl s +10";
-#        on-scroll-down = "brightnessctl s 10-";
+        on-scroll-up = "brightnessctl s +5%";
+        on-scroll-down = "brightnessctl s 5%-";
       };
 
 
