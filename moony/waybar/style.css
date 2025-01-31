@@ -68,7 +68,7 @@ window#waybar.empty #window {
   padding: 0px 4px;
   transition-property: background-color;
   transition-duration: 0.25s;
-  background-color: rgba(110, 110, 110, 0.5);
+  background-color: rgba(125, 125, 125, 0.5);
 }
 
 #workspaces button.empty {
@@ -76,7 +76,7 @@ window#waybar.empty #window {
 }
 
 #workspaces button.active {
-  background-color: rgba(160, 160, 160, 0.5);
+  background-color: rgba(180, 180, 180, 0.5);
 }
 
 #workspaces button:hover {
