@@ -32,6 +32,7 @@
     gh = import ./git/gh.nix;
     hyprlock = import ./hyprland/hyprlock.nix;
     wofi = import ./wofi/wofi.nix;
+    fastfetch = import ./fastfetch.nix;
 
     git-credential-oauth.enable = true;
     bash.enable = true;
