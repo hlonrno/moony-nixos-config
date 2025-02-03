@@ -3,7 +3,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = " "
 
 vim.opt.backup = false
 vim.opt.swapfile = false
@@ -45,6 +45,6 @@ vim.api.nvim_set_keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 vim.api.nvim_set_keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
-vim.api.nvim_set_keymap("n", "<", "<gv", opts)
-vim.api.nvim_set_keymap("n", ">", ">gv", opts)
+vim.api.nvim_set_keymap("v", "<", "<gv", opts)
+vim.api.nvim_set_keymap("v", ">", ">gv", opts)
 

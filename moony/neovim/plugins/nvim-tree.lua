@@ -6,3 +6,8 @@ require("nvim-tree").setup({
     dotfiles = true,
   },
 })
+
+local opts = { noremap = true }
+
+vim.api.nvim_set_keymap('n', "<leader>fe", "<cmd>NvimTreeToggle<cr>", opts);
+
