@@ -27,6 +27,7 @@
     font-awesome
     bluez
     file
+    ghc
   ];
 
   services = {
