@@ -8,8 +8,8 @@
 
     background = {
       path = "screenshot";
-      blur_passes = 4;
-      blur_size = 30;
+      blur_passes = 3;
+      blur_size = 15;
     };
 
     input-field = {
