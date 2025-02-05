@@ -2,14 +2,14 @@
   enable = true;
   settings = {
     general = {
-      grace = 0.5;
+      grace = 0;
       ignore_empty_input = true;
     };
 
     background = {
       path = "screenshot";
-      blur_passes = 3;
-      blur_size = 15;
+      blur_passes = 4;
+      blur_size = 30;
     };
 
     input-field = {

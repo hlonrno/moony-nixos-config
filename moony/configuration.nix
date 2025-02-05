@@ -21,14 +21,25 @@
     fastfetch
     brightnessctl
     loupe
-    jdk23
+    jdk
+    zig
     unzip
     tree
-    font-awesome
     bluez
     file
     ghc
-  ];
+    obs-studio
+    blender
+    vesktop
+    radeontop
+    hyprcursor
+    hyprpaper
+    hypridle
+    hyprshot
+    hyprpicker
+    hyprpolkitagent
+    bibata-cursors
+   ];
 
   services = {
     libinput.enable = false;

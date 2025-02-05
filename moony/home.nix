@@ -3,20 +3,6 @@
   home.homeDirectory = "/home/moony";
   home.sessionVariables.EDITOR = "nvim";
 
-  home.packages = with pkgs; [
-    obs-studio
-    blender
-    vesktop
-    radeontop
-    hyprcursor
-    hyprpaper
-    hypridle
-    hyprshot
-    hyprpicker
-    hyprpolkitagent
-    bibata-cursors
-  ];
-
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix;
   home.file = import ./files/main.nix;
 
