@@ -60,7 +60,7 @@
       kb_options = "grp:alt_space_toggle";
       repeat_rate = 90;
       repeat_delay = 300;
-      numlock_by_default = true;
+      numlock_by_default = false;
 
       follow_mouse = 1;
       sensitivity = 1;
@@ -88,16 +88,17 @@
       "SUPER, P, exec, waybar"
 
       "SUPER, T, exec, kitty"
-      "SUPER, Q, killactive, "
+      "SUPER, Q, killactive,"
       "SUPER, E, exec, nautilus"
-      "SUPER, F, togglefloating, "
-      "SUPER SHIFT, F, pseudo, "
-      "SUPER, G, togglesplit, "
+      "SUPER, F, togglefloating,"
+      "SUPER SHIFT, F, pseudo,"
+      "SUPER, G, togglesplit,"
       "SUPER SHIFT, G, swapnext"
       "SUPER, S, exec, wofi -Gi --show drun"
       "SUPER SHIFT, E, exec, wofi-emoji"
       "SUPER, V, exec, pkill vivaldi; vivaldi"
       "SUPER, Z, pin, active"
+      "SUPER, B, exec, hyprlock"
       "SUPER, H, movefocus, l"
       "SUPER, L, movefocus, r"
       "SUPER, K, movefocus, u"
