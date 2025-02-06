@@ -39,6 +39,7 @@
     hyprpicker
     hyprpolkitagent
     bibata-cursors
+    lorien
    ];
 
   services = {
