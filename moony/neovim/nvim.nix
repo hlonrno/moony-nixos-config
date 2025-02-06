@@ -67,6 +67,10 @@ in
         plugin = nvim-tree-lua;
         config = toLuaFile ./plugins/nvim-tree.lua;
       }
+      {
+        plugin = telescope-nvim;
+        config = toLuaFile ./plugins/telescope.lua;
+      }
 
       vim-visual-multi
       vim-fugitive
