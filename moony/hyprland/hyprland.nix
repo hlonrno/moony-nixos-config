@@ -98,6 +98,8 @@
       "SUPER SHIFT, E, exec, wofi-emoji"
       "SUPER, V, exec, pkill vivaldi; vivaldi"
       "SUPER, Z, pin, active"
+      "SUPER, D, movetoworkspace, 9"
+      "SUPER, D, exec, lorien"
       "SUPER, B, exec, hyprlock"
       "SUPER, H, movefocus, l"
       "SUPER, L, movefocus, r"
