@@ -40,7 +40,7 @@
     hyprpolkitagent
     bibata-cursors
     lorien
-   ];
+  ];
 
   services = {
     libinput.enable = false;

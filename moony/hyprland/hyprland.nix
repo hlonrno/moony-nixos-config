@@ -134,7 +134,7 @@
 
     windowrule = [
       "suppressevent maximize, class:.*"
-      "float, title:^(SpeedCrunch)&"
+      "float, title:^(SpeedCrunch)$"
     ];
   };
 }
