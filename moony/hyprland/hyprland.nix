@@ -133,8 +133,8 @@
     ];
 
     windowrule = [
-      "suppressevent maximize, class:.*"
-      "float, title:^(SpeedCrunch)$"
+      "suppressevent maximize,class:.*"
+      "float,class:org.speedcrunch"
     ];
   };
 }
