@@ -5,13 +5,10 @@
       layer = "top";
       position = "top";
       spacing = 7;
-      margin-top = 2;
-      margin-left = 4;
-      margin-right = 4;
 
       modules-left = [ "hyprland/workspaces" "hyprland/window" ];
       modules-center = [ ];
-      modules-right = [ "clock" "network" "bluetooth" "pulseaudio" "backlight" "battery" "hyprland/language" "privacy" "custom/wlogout" ];
+      modules-right = [ "clock" "network" "bluetooth" "pulseaudio" "backlight" "hyprland/language" "privacy" "custom/wlogout" ];
 
       clock = {
         format = "{:%H:%M}";
@@ -74,19 +71,6 @@
           { type = "screenshare"; tooltip = false; }
           { type = "audio-in"; tooltip = false; }
         ];
-      };
-
-      battery = {
-        states = {
-          good = 100;
-          warning = 30;
-          critical = 15;
-        };
-
-        format = "{capacity}%";
-        format-plugged = "{capacity}% P";
-        # format-good = "";
-        tooltip-format = "{time}";
       };
 
       "custom/wlogout" = {

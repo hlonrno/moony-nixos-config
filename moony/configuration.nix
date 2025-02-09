@@ -29,7 +29,7 @@
     file
     ghc
     obs-studio
-    blender
+    # blender
     vesktop
     radeontop
     hyprcursor
