@@ -2,7 +2,9 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
-vim.g.mapleader = "\\"
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+vim.g.zig_fmt_autosave = 0
 
 vim.opt.backup = false
 vim.opt.swapfile = false

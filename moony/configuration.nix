@@ -44,12 +44,12 @@
 
   services = {
     libinput.enable = false;
-    pulseaudio.enable = false;
     xserver.enable = true;
     printing.enable = true;
     blueman.enable = true;
     openssh.enable = true;
     flatpak.enable = true;
+    pulseaudio.enable = false;
     
     displayManager.autoLogin = {
       enable = true;
