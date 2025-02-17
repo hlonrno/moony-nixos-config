@@ -2,8 +2,6 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 vim.g.zig_fmt_autosave = 0
 
 vim.opt.backup = false
@@ -14,15 +12,15 @@ vim.opt.conceallevel = 0
 vim.opt.fileencoding = "utf-8"
 vim.opt.ignorecase = true
 vim.opt.wrap = false
-vim.opt.colorcolumn =  { 120 }
+vim.opt.colorcolumn =  { 80 }
 vim.opt.expandtab = true
 vim.opt.showmode = false
 
-vim.opt.showtabline = 2
+vim.opt.showtabline = 0
 vim.opt.smartindent = true
-vim.opt.softtabstop = 2
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
 vim.opt.smartcase = true
 vim.opt.splitbelow = true
