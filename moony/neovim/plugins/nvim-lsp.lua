@@ -25,7 +25,7 @@ cmp.setup {
         ['<A-j>'] = cmp.mapping.select_next_item {},
         ['<A-k>'] = cmp.mapping.select_prev_item {},
         ['<Tab>'] = cmp.mapping.confirm { select = true },
-        ['<C-.>'] = cmp.mapping.cmplete {},
+        ['<C-.>'] = cmp.mapping.complete {},
     },
 
     sources = {
