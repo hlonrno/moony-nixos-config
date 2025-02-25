@@ -30,18 +30,11 @@ in
           p.tree-sitter-lua
           p.tree-sitter-java
           p.tree-sitter-zig
-          p.tree-sitter-c
-          p.tree-sitter-cpp
-          p.tree-sitter-cmake
-          p.tree-sitter-css
+          p.tree-sitter-rust
           p.tree-sitter-markdown
           p.tree-sitter-markdown-inline
         ]);
         config = toLuaFile ./plugins/treesitter.lua;
-      }
-      {
-        plugin = nvim-cmp;
-        config = toLuaFile ./plugins/nvim-lsp.lua;
       }
       {
         plugin = lazy-lsp-nvim;
@@ -49,7 +42,7 @@ in
       }
       {
         plugin = undotree;
-        config = "noremap <F5> :UndoTreeToggle<CR>";
+        config = "noremap <F5> :UndotreeToggle<CR>";
       }
       {
         plugin = ts-comments-nvim;
@@ -71,11 +64,18 @@ in
         plugin = telescope-nvim;
         config = toLuaFile ./plugins/telescope.lua;
       }
+      {
+        plugin = nvim-cmp;
+        config = toLuaFile ./plugins/nvim-lsp.lua;
+      }
+      {
+        plugin = nvim-lspconfig;
+        config = toLuaFile ./plugins/lsp-config.lua;
+      }
 
       vim-visual-multi
       vim-fugitive
       cmp-nvim-lsp
-      nvim-lspconfig
       vim-nix
     ];
   }
