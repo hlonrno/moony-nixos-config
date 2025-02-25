@@ -11,6 +11,10 @@
     speedcrunch
     libsForQt5.qt5ct
     ffmpeg
+    ripgrep
+    jq
+    unzip
+    tree
     mtpfs
     nautilus
     haruna
@@ -23,11 +27,10 @@
     loupe
     jdk
     zig
-    unzip
-    tree
     bluez
     file
-    ghc
+    cargo
+    rustc
     obs-studio
     # blender
     vesktop
