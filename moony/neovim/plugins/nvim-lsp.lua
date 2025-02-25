@@ -1,10 +1,6 @@
 local cmp = require('cmp')
 
 cmp.setup {
-    enabled = function()
-        return not cmp.config.context.in_treesitter_capture('Comment')
-    end,
-
     snippet = {
         expand = function(args)
             vim.snippet.expand(args.body)
