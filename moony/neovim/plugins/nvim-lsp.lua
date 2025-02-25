@@ -12,8 +12,8 @@ cmp.setup {
     },
 
     window = {
-        completion = cmp.config.windows.bordered(),
-        documentation = cmp.config.windows.bordered {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered {
             max_width = 80,
             max_height = 50,
         },
