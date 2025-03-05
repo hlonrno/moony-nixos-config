@@ -12,7 +12,7 @@
   };
 
   programs = {
-    neovim = import ./neovim/nvim.nix { inherit pkgs; };
+    neovim = import ./nvim/nvim.nix { inherit pkgs; };
     waybar = import ./waybar/waybar.nix;
     kitty = import ./kitty/kitty.nix;
     gh = import ./git/gh.nix;

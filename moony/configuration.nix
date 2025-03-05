@@ -25,12 +25,10 @@
     fastfetch
     brightnessctl
     loupe
-    jdk
+    jdk23
     zig
     bluez
     file
-    cargo
-    rustc
     obs-studio
     # blender
     vesktop
