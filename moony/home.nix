@@ -15,12 +15,13 @@
     neovim = import ./nvim/nvim.nix { inherit pkgs; };
     waybar = import ./waybar/waybar.nix;
     kitty = import ./kitty/kitty.nix;
-    gh = import ./git/gh.nix;
+    gh = import ./gh.nix;
     hyprlock = import ./hyprland/hyprlock.nix;
     wofi = import ./wofi/wofi.nix;
     fastfetch = import ./fastfetch.nix;
 
     git-credential-oauth.enable = true;
+    zoxide.enable = true;
     bash.enable = true;
     git.enable = true;
     home-manager.enable = true;
