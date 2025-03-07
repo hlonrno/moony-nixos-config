@@ -19,9 +19,14 @@
     hyprlock = import ./hyprland/hyprlock.nix;
     wofi = import ./wofi/wofi.nix;
     fastfetch = import ./fastfetch.nix;
+    nushell = import ./nushell.nix;
+    zoxide = {
+      enable = true;
+      enableBashIntegration = true;
+      enableNushellIntegration = true;
+    };
 
     git-credential-oauth.enable = true;
-    zoxide.enable = true;
     bash.enable = true;
     git.enable = true;
     home-manager.enable = true;
