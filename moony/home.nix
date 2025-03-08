@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {  
+{ config, pkgs, ... }: {
   home.stateVersion = "24.11";
   home.homeDirectory = "/home/moony";
   home.sessionVariables.EDITOR = "nvim";
@@ -28,6 +28,7 @@
 
     git-credential-oauth.enable = true;
     bash.enable = true;
+    bash.bashrcExtra = "nu";
     git.enable = true;
     home-manager.enable = true;
   };
