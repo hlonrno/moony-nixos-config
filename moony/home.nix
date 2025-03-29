@@ -28,7 +28,6 @@
 
     git-credential-oauth.enable = true;
     bash.enable = true;
-    bash.bashrcExtra = "nu";
     git.enable = true;
     home-manager.enable = true;
   };

@@ -40,7 +40,7 @@
     hyprpicker
     hyprpolkitagent
     bibata-cursors
-    lorien
+    krita
   ];
 
   services = {
