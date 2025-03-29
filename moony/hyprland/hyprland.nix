@@ -1,7 +1,7 @@
 {
   enable = true;
   settings = {
-    monitor = [ "eDP-1,1920x1080@60,0x0,1" ];
+    monitor = [ "eDP-1,1920x1080@59.96,0x0,1" "HDMI-A-1,1360x768@59.62,-1813x0,1.333333" ];
     exec-once = [
       "waybar"
       "hyprpaper"
@@ -98,7 +98,7 @@
       "SUPER SHIFT, E, exec, wofi-emoji"
       "SUPER, V, exec, pkill vivaldi; vivaldi"
       "SUPER, Z, pin, active"
-      "SUPER, A, exec, lorien"
+      "SUPER, A, exec, krita"
       "SUPER, B, exec, hyprlock"
       "SUPER, H, movefocus, l"
       "SUPER, L, movefocus, r"
