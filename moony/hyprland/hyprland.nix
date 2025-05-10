@@ -1,7 +1,7 @@
-{
+{ pkgs }: {
   enable = true;
   settings = {
-    monitor = [ "eDP-1,1920x1080@59.96,0x0,1" "HDMI-A-1,1360x768@59.62,-1813x0,1.333333" ];
+    monitor = [ "eDP-1,1920x1080,0x0,1" "HDMI-A-1,preferred,auto-left,0.66666" ];
     exec-once = [
       "waybar"
       "hyprpaper"
@@ -56,7 +56,7 @@
     };
 
     input = {
-      kb_layout = "us,bg(phonetic)";
+      kb_layout = "us,bg";
       kb_options = "grp:alt_space_toggle";
       repeat_rate = 90;
       repeat_delay = 300;
@@ -84,48 +84,48 @@
     };
 
     bind = [
-      "SUPER, O, exec, pkill waybar"
-      "SUPER, P, exec, waybar"
+      "SUPER, O, execr, pkill waybar"
+      "SUPER, P, execr, waybar"
 
-      "SUPER, T, exec, kitty"
+      "SUPER, T, execr, kitty"
       "SUPER, Q, killactive,"
-      "SUPER, E, exec, nautilus"
+      "SUPER, E, execr, nautilus"
       "SUPER, F, togglefloating,"
       "SUPER SHIFT, F, pseudo,"
       "SUPER, G, togglesplit,"
       "SUPER SHIFT, G, swapnext"
-      "SUPER, S, exec, wofi -Gi --show drun"
-      "SUPER SHIFT, E, exec, wofi-emoji"
-      "SUPER, V, exec, pkill vivaldi; vivaldi"
+      "SUPER, S, execr, wofi -Gi --show drun"
+      "SUPER SHIFT, E, execr, wofi-emoji"
+      "SUPER, V, execr, pkill vivaldi; vivaldi"
       "SUPER, Z, pin, active"
-      "SUPER, A, exec, krita"
-      "SUPER, B, exec, hyprlock"
+      "SUPER, A, execr, krita"
+      "SUPER, B, execr, hyprlock"
       "SUPER, H, movefocus, l"
       "SUPER, L, movefocus, r"
       "SUPER, K, movefocus, u"
       "SUPER, J, movefocus, d"
 
-      "SUPER, 1, workspace, 1"
-      "SUPER, 2, workspace, 2"
-      "SUPER, 3, workspace, 3"
-      "SUPER, 4, workspace, 4"
-      "SUPER, 5, workspace, 5"
-      "SUPER, D, workspace, 9"
-
-      "SUPER SHIFT, 1, movetoworkspace, 1"
-      "SUPER SHIFT, 2, movetoworkspace, 2"
-      "SUPER SHIFT, 3, movetoworkspace, 3"
-      "SUPER SHIFT, 4, movetoworkspace, 4"
-      "SUPER SHIFT, 5, movetoworkspace, 5"
-      "SUPER SHIFT, D, movetoworkspace, 9"
-
       "SUPER, SPACE, togglespecialworkspace, magic"
-      "SUPER SHIFT, SPACE, movetoworkspace, special:magic"
+      "SUPER SHIFT, SPACE, movetoworkspacesilent, special:magic"
 
       ", PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm region"
       "SHIFT, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm output"
       "CONTROL, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm window"
-    ];
+    ] ++ (
+      pkgs.lib.pipe [ 1 2 3 4 5 9 ] [
+        (map (v:
+          let
+            id = toString v;
+            bind = if v == 9 then "D" else toString v;
+          in
+         [
+            "SUPER, ${bind}, workspace, ${id}"
+            "SUPER SHIFT, ${bind}, movetoworkspacesilent, ${id}"
+          ]
+        ))
+        (builtins.foldl' (acc: n: acc ++ n) [])
+      ]
+    );
 
     bindm = [
       "SUPER, mouse:272, movewindow"
@@ -134,7 +134,7 @@
 
     windowrule = [
       "suppressevent maximize,class:.*"
-      "float,class:org.speedcrunch"
+      "float,title:SpeedCrunch"
     ];
   };
 }
