@@ -1,10 +1,11 @@
-{ config, pkgs, ... }@inputs: {
+{ pkgs, ... }@inputs: {
   imports = [
     ./hardware-configuration.nix
   ];
 
   environment.systemPackages = with pkgs; [
     vivaldi
+    home-manager
     wl-clipboard
     libnotify
     dunst
@@ -41,6 +42,8 @@
     hyprpolkitagent
     bibata-cursors
     krita
+    lorien
+    wineWow64Packages.waylandFull
   ];
 
   services = {
@@ -114,7 +117,6 @@
   };
 
   environment.sessionVariables = {
-    EDITOR = "nvim";
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
   };

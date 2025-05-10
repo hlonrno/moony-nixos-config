@@ -21,5 +21,6 @@
         inputs.home-manager.nixosModules.default
       ];
     };
+
   };
 }

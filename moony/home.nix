@@ -3,7 +3,7 @@
   home.homeDirectory = "/home/moony";
   home.sessionVariables.EDITOR = "nvim";
 
-  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix;
+  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };
   home.file = import ./files/main.nix;
 
   services = {

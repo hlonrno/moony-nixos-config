@@ -7,23 +7,19 @@
       spacing = 7;
 
       modules-left = [ "hyprland/workspaces" "hyprland/window" ];
-      modules-center = [ ];
-      modules-right = [ "clock" "network" "bluetooth" "pulseaudio" "backlight" "hyprland/language" "privacy" "custom/wlogout" ];
+      modules-center = [ "clock" ];
+      modules-right = [ "network" "bluetooth" "pulseaudio" "backlight" "hyprland/language" "privacy" "custom/wlogout" ];
 
       clock = {
-        format = "{:%H:%M}";
-        format-alt = "{:%a, %d %b  %H:%M}";
+        format = "{:%a, %d.%m.%Yг. %H:%M}";
       };
 
       "hyprland/workspaces" = {
         format = "";
-        persistent-workspaces = {
-          "*" = 5;
-        };
       };
 
       "hyprland/window" = {
-        max-length = 125;
+        max-length = 200;
       };
 
       network = {
