@@ -1,26 +1,16 @@
 {
   description = "snowflake";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
-  let
-    system = "x86_64-linux";
-    pgks = nixpkgs.legacyPackages.${system};
-  in
-  {
+  outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations.t = nixpkgs.lib.nixosSystem {
+      specialArgs = { inherit inputs; };
       modules = [
-        ./moony/configuration.nix
-        inputs.home-manager.nixosModules.default
+        ./configuration.nix
       ];
     };
-
   };
 }

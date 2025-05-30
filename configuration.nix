@@ -1,65 +1,52 @@
-{ pkgs, ... }@inputs: {
+{ inputs, pkgs, ... }: {
   imports = [
     ./hardware-configuration.nix
   ];
 
   environment.systemPackages = with pkgs; [
-    vivaldi
-    home-manager
-    wl-clipboard
-    libnotify
-    dunst
-    speedcrunch
-    libsForQt5.qt5ct
-    ffmpeg
-    ripgrep
-    jq
-    unzip
-    tree
-    mtpfs
-    nautilus
+    neovim
     haruna
-    wofi
-    wofi-emoji
-    wlogout
-    pavucontrol
-    fastfetch
-    brightnessctl
     loupe
-    jdk23
-    zig
-    bluez
-    file
-    obs-studio
-    # blender
-    vesktop
-    radeontop
+    nautilus
+    speedcrunch
+    kitty
+
+    bibata-cursors
+    brightnessctl
     hyprcursor
     hyprpaper
-    hypridle
     hyprshot
     hyprpicker
     hyprpolkitagent
-    bibata-cursors
-    krita
-    lorien
-    wineWow64Packages.waylandFull
-  ];
+    pavucontrol
+    wl-clipboard
+    wofi
+    wofi-emoji
+    wlogout
+    bluez
+    dunst
+    jq
+    libnotify
+    libsForQt5.qt5ct
+  ] ++ (with inputs.nixpkgs-unstable; [
+    vivaldi
+    home-manager
+  ]);
 
   services = {
-    libinput.enable = false;
     xserver.enable = true;
     printing.enable = true;
     blueman.enable = true;
     openssh.enable = true;
     flatpak.enable = true;
-    pulseaudio.enable = false;
-    
+    libinput.enable = false;
+
     displayManager.autoLogin = {
       enable = true;
       user = "moony";
     };
 
+    xserver.videoDrivers = [ "amdgpu" ];
     xserver.xkb = {
       layout = "us";
       variant = "";
@@ -93,6 +80,7 @@
   };
 
   hardware = {
+    pulseaudio.enable = false;
     bluetooth.enable = true;
     graphics.enable = true;
   };
@@ -108,12 +96,6 @@
     description = "Moony";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = [ ];
-  };
-
-  home-manager = {
-    backupFileExtension = "backup";
-    extraSpecialArgs = { inherit inputs; };
-    users.moony = import ./home.nix;
   };
 
   environment.sessionVariables = {
