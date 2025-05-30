@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{ pkgs, pkgs-unstable, ... }: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -28,9 +28,8 @@
     jq
     libnotify
     libsForQt5.qt5ct
-    home-manager
-  ] ++ (with inputs.nixpkgs-unstable; [
-    vivaldi
+  ] ++ (with pkgs-unstable; [
+    vivaldi vivaldi-ffmpeg-codecs
   ]);
 
   services = {

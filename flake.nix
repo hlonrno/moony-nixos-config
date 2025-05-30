@@ -5,9 +5,9 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { nixpkgs, nixpkgs-unstable, ... }: {
     nixosConfigurations.t = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
+      specialArgs = { pkgs-unstable = nixpkgs-unstable; };
       modules = [
         ./configuration.nix
       ];
