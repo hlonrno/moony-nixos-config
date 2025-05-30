@@ -28,9 +28,9 @@
     jq
     libnotify
     libsForQt5.qt5ct
+    home-manager
   ] ++ (with inputs.nixpkgs-unstable; [
     vivaldi
-    home-manager
   ]);
 
   services = {
@@ -40,6 +40,7 @@
     openssh.enable = true;
     flatpak.enable = true;
     libinput.enable = false;
+    pulseaudio.enable = false;
 
     displayManager.autoLogin = {
       enable = true;
@@ -80,7 +81,6 @@
   };
 
   hardware = {
-    pulseaudio.enable = false;
     bluetooth.enable = true;
     graphics.enable = true;
   };
