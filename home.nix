@@ -44,7 +44,7 @@
     };
     bash.enable = true;
     bash.shellInit = ''
-      alias nreb="nixos-rebuild switch --flake ~/nix#t"
+      alias nreb="nixos-rebuild switch --flake ${./nixos}#t"
     '';
     obs-studio.enable = true;
     home-manager.enable = true;
