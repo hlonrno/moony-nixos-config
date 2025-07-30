@@ -1,0 +1,35 @@
+#text {
+  font-size: 24px;
+  color: rgb(220, 220, 220);
+}
+
+#window, #outer-box {
+  background-color: transparent;
+}
+
+#scroll {
+  background-color: transparent;
+  box-shadow: 50px 25px 10px rgb(0, 0, 0);
+}
+
+#inner-box {
+  background-color: rgba(70, 70, 70, 0.7);
+  margin-top: 2px;
+  border-radius: 5px;
+}
+
+#input {
+  background-color: rgba(50, 50, 50, 0.7);
+}
+
+#entry { 
+  background-color: rgba(55, 55, 55, 0.7);
+}
+
+#entry:selected {
+  background-color: rgba(50, 75, 85, 0.7);
+}
+
+#expander-box {
+  background-color: rgba(30, 55, 110, 0.7);
+}

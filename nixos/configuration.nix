@@ -2,6 +2,9 @@
   imports = [
     ./hardware-configuration.nix
   ];
+  
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "moony" ];
 
   environment.systemPackages = with pkgs; [
     neovim
