@@ -49,7 +49,6 @@
       user = "moony";
     };
 
-    xserver.videoDrivers = [ "amdgpu" ];
     xserver.xkb = {
       layout = "us";
       variant = "";
