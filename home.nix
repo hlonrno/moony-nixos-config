@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{pkgs, pkgs-unstable, ... }:
 {
   home.stateVersion = "24.11";
   home.homeDirectory = "/home/moony";
@@ -16,6 +16,8 @@
     unzip
     vesktop
     lorien
+    shotcut
+    jdt-language-server
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };
@@ -40,12 +42,13 @@
     };
     java = {
       enable = true;
-      package = pkgs.jdk23;
+      package = pkgs.jdk24;
     };
     bash.enable = true;
-    bash.shellInit = ''
-      alias nreb="nixos-rebuild switch --flake ${./nixos}#t"
-    '';
+    bash.shellAliases = {
+      nixswch = "sudo nixos-rebuild switch --flake ${./nixos}#t";
+      nixtest = "sudo nixos-rebuild test --flake ${./nixos}#t";
+    };
     obs-studio.enable = true;
     home-manager.enable = true;
   };
