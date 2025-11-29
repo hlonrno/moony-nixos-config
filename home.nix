@@ -16,8 +16,7 @@
     unzip
     vesktop
     lorien
-    shotcut
-    jdt-language-server
+    cmake
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };
