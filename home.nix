@@ -16,7 +16,7 @@
     unzip
     vesktop
     lorien
-    cmake
+    gnumake
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };
@@ -45,7 +45,7 @@
     };
     bash.enable = true;
     bash.shellAliases = {
-      nixswch = "sudo nixos-rebuild switch --flake ${./nixos}#t";
+      nixswitch = "sudo nixos-rebuild switch --flake ${./nixos}#t";
       nixtest = "sudo nixos-rebuild test --flake ${./nixos}#t";
     };
     obs-studio.enable = true;
