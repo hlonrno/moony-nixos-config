@@ -50,6 +50,7 @@
       nixtest = "sudo nixos-rebuild test --flake ${./nixos}#t";
     };
     obs-studio.enable = true;
+    bashmount.enable = true;
     home-manager.enable = true;
   };
 }

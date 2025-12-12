@@ -12,5 +12,4 @@
     nord
     vim-tmux-navigator
   ];
-  # extraConfig = builtins.readFile ./tmux.conf;
 }
