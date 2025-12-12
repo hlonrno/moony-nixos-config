@@ -1,6 +1,6 @@
 {pkgs, pkgs-unstable, ... }:
 {
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
   home.homeDirectory = "/home/moony";
   home.username = "moony";
   home.file = import ./files/main.nix;
@@ -24,6 +24,7 @@
 
   programs = {
     neovim = import ./nvim/nvim.nix { inherit pkgs; };
+    tmux = import ./tmux/tmux.nix { inherit pkgs; };
     waybar = import ./waybar/waybar.nix;
     kitty = import ./kitty/kitty.nix;
     hyprlock = import ./hyprland/hyprlock.nix;
@@ -41,7 +42,7 @@
     };
     java = {
       enable = true;
-      package = pkgs.jdk24;
+      package = pkgs-unstable.jdk25;
     };
     bash.enable = true;
     bash.shellAliases = {
