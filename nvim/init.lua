@@ -34,10 +34,10 @@ vim.opt.signcolumn = 'yes'
 
 local opts = { noremap = true }
 
-vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', opts)
-vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', opts)
-vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', opts)
-vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', opts)
+-- vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', opts)
+-- vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', opts)
+-- vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', opts)
+-- vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', opts)
 
 vim.api.nvim_set_keymap('n', '<C-Up>', ':resize -2<CR>', opts)
 vim.api.nvim_set_keymap('n', '<C-Down>', ':resize +2<CR>', opts)
