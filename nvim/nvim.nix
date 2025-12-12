@@ -64,6 +64,10 @@ in
         plugin = nvim-lspconfig;
         config = toLuaFile ./plugins/lsp-config.lua;
       }
+      {
+        plugin = vim-tmux-navigator;
+        config = toLuaFile ./plugins/vim-tmux-navigator.lua;
+      }
 
       vim-visual-multi
       vim-fugitive

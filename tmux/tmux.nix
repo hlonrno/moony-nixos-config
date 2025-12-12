@@ -4,9 +4,13 @@
   disableConfirmationPrompt = true;
   keyMode = "vi";
   shell = "${pkgs.bash}/bin/bash";
-  terminal = "screen-255color";
+  terminal = "screen-256color";
   shortcut = "a";
-  plugins = with pkgs; [
-    tmuxPlugins.nord
+  reverseSplit = true;
+  plugins = with pkgs.tmuxPlugins; [
+    sensible
+    nord
+    vim-tmux-navigator
   ];
+  # extraConfig = builtins.readFile ./tmux.conf;
 }
