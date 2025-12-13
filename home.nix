@@ -32,6 +32,8 @@
     wofi = import ./wofi/wofi.nix;
     gh = import ./gh.nix;
     fastfetch = import ./fastfetch.nix;
+    zsh = import ./zsh/zsh.nix;
+
     git = {
       enable = true;
       userEmail = "moony25@proton.me";
@@ -40,6 +42,7 @@
     zoxide = {
       enable = true;
       enableBashIntegration = true;
+      enableZshIntegration = true;
     };
     java = {
       enable = true;
