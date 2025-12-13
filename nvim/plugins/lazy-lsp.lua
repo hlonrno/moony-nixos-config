@@ -27,7 +27,7 @@ require('lazy-lsp').setup {
 
             local opts = { noremap = true }
 
-            vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
+            vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-k>', '<cmd>lua vim.lsp.buf.hover()<cr>', opts)
             vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-d>', '<cmd>lua vim.lsp.buf.definition()<cr>', opts)
             vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-D>', '<cmd>lua vim.lsp.buf.declaration()<cr>', opts)
             vim.api.nvim_buf_set_keymap(bufnr, 'n', '<A-i>', '<cmd>lua vim.lsp.buf.implementation()<cr>', opts)
