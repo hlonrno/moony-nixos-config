@@ -2,8 +2,7 @@
   enable = true;
   extraConfig = builtins.readFile ./Catppuccin-Mocha.conf;
   settings = {
-    cursor_shape = "beam";
-    cursor_shape_unfocused = "underline";
+    cursor_shape = "underline";
     cursor_blink_interval = -1;
     scrollback_lines = 5000;
     scrollback_indicator_opacity = 0.3;
@@ -14,6 +13,6 @@
     enable_terminal_bell = "no";
     active_border_color = "none";
     confirm_os_window_close = 0;
-    background_opacity = 0.9;
+    background_opacity = 0.95;
   };
 }

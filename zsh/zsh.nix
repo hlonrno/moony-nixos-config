@@ -1,12 +1,10 @@
 {
   enable = true;
-  enableLsColors = true;
   antidote.enable = true;
+  oh-my-zsh.enable = true;
+  autosuggestion.enable = true;
+
   antidote.plugins = [
 
   ];
-
-  autosuggestion.enable = true;
-  autosuggestion.highlight = true;
-  oh-my-zsh.enable = true;
 }

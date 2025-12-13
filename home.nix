@@ -39,20 +39,24 @@
       userEmail = "moony25@proton.me";
       userName = "hlonrno";
     };
+
     zoxide = {
       enable = true;
       enableBashIntegration = true;
       enableZshIntegration = true;
     };
+
     java = {
       enable = true;
       package = pkgs-unstable.jdk25;
     };
+
     bash.enable = true;
     bash.shellAliases = {
       nixswitch = "sudo nixos-rebuild switch --flake ${./nixos}#t";
       nixtest = "sudo nixos-rebuild test --flake ${./nixos}#t";
     };
+
     obs-studio.enable = true;
     bashmount.enable = true;
     home-manager.enable = true;
