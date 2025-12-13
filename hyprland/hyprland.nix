@@ -15,21 +15,32 @@
     ];
 
     decoration = {
-      rounding = 5;
+      rounding = 0;
     };
 
+    workspace = [
+      "1, monitor:eDP-1, persistent:true"
+      "2, monitor:eDP-1, persistent:true"
+      "3, monitor:eDP-1, persistent:true"
+      "4, monitor:eDP-1, persistent:true"
+      "5, monitor:HDMI-1, persistent:true"
+      "6, monitor:HDMI-1, persistent:true"
+      "7, monitor:HDMI-1, persistent:true"
+      "8, monitor:HDMI-1, persistent:true"
+    ];
+
     general = {
-      gaps_in = 2;
-      gaps_out = 4;
-      border_size = 3;
-      "col.active_border" = "0xff6590fd";
-      "col.inactive_border" = "0xff4b4c53";
+      gaps_in = 0;
+      gaps_out = 0;
+      border_size = 2;
+      "col.active_border" = "0xffc8c8c8";
+      "col.inactive_border" = "0xff8c8c8c";
       allow_tearing = false;
       layout = "dwindle";
     };
 
     animations = {
-      enabled = true;
+      enabled = false;
 
       bezier = "bz, 0.2, 1, 0, 1";
 
@@ -59,7 +70,7 @@
     };
 
     input = {
-      kb_layout = "us,bg(phonetic)";
+      kb_layout = "us,bg";
       kb_options = "grp:alt_space_toggle";
       repeat_rate = 90;
       repeat_delay = 300;
@@ -98,12 +109,19 @@
       "SUPER SHIFT, F, pseudo,"
       "SUPER, G, togglesplit,"
       "SUPER SHIFT, G, swapnext"
-      "SUPER, S, execr, wofi -Gi --show drun"
+      # G - gtk-dark
+      # I - app images
+      # i - case insensitive
+      # e - execute search
+      # a - no actions
+      # columns: 7, width: 40%; search: fuzzy; show: drun;
+      "SUPER, S, execr, wofi -GIieaw 7 -W 40% -M fuzzy --show drun"
       "SUPER SHIFT, E, execr, wofi-emoji"
       "SUPER, V, execr, vivaldi"
       "SUPER, Z, pin, active"
       "SUPER, A, execr, krita"
       "SUPER, B, execr, hyprlock"
+
       "SUPER, H, movefocus, l"
       "SUPER, L, movefocus, r"
       "SUPER, K, movefocus, u"
@@ -112,23 +130,21 @@
       "SUPER, SPACE, togglespecialworkspace, magic"
       "SUPER SHIFT, SPACE, movetoworkspacesilent, special:magic"
 
-      ", PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm region"
-      "SHIFT, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm output"
-      "CONTROL, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm window"
+      ", PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm output"
+      "SHIFT, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm window"
+      "CONTROL, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm region"
     ] ++ (
-      pkgs.lib.pipe [ 1 2 3 4 5 9 ] [
-        (map (v:
-          let
-            id = toString v;
-            bind = if v == 9 then "D" else toString v;
-          in
-         [
-            "SUPER, ${bind}, workspace, ${id}"
-            "SUPER SHIFT, ${bind}, movetoworkspacesilent, ${id}"
-          ]
-        ))
-        (builtins.foldl' (acc: n: acc ++ n) [])
-      ]
+      builtins.foldl' (acc: n: acc ++ n) []
+      (map (v:
+        let
+          id = toString v;
+          bind = if v == 9 then "D" else toString v;
+        in
+        [
+          "SUPER, ${bind}, workspace, ${id}"
+          "SUPER SHIFT, ${bind}, movetoworkspacesilent, ${id}"
+        ]
+      ) [ 1 2 3 4 5 6 7 8 ])
     );
 
     bindm = [

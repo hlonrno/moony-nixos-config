@@ -14,9 +14,10 @@
     radeontop
     tree
     unzip
-    vesktop
     lorien
     gnumake
+    bibata-cursors
+    vesktop
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };

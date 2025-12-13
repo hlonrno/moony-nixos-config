@@ -9,6 +9,7 @@ in
     preload = [ wallpaper ];
     wallpaper = [
       "eDP-1,${wallpaper}"
+      ",${wallpaper}"
     ];
   };
 }
