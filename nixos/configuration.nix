@@ -14,7 +14,6 @@
     speedcrunch
     kitty
 
-    bibata-cursors
     brightnessctl
     hyprcursor
     hyprpaper

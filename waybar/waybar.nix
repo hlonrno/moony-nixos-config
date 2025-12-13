@@ -4,18 +4,21 @@
     mainBar = {
       layer = "top";
       position = "top";
-      spacing = 7;
 
       modules-left = [ "hyprland/workspaces" "hyprland/window" ];
       modules-center = [ "clock" ];
-      modules-right = [ "network" "bluetooth" "pulseaudio" "backlight" "hyprland/language" "privacy" "custom/wlogout" ];
+      modules-right = [ "network" "bluetooth" "pulseaudio" "backlight" "hyprland/language" "privacy" "battery" "custom/wlogout" ];
 
       clock = {
         format = "{:%a, %d.%m.%Yг. %H:%M}";
       };
 
       "hyprland/workspaces" = {
-        format = "";
+        format = "{icon}";
+        "persistent-workspaces" = {
+          "eDP-1" = [ 1 2 3 4 ];
+          "HDMI-1" = [ 5 6 7 8 ];
+        };
       };
 
       "hyprland/window" = {
@@ -32,7 +35,7 @@
       bluetooth = {
         format = "BL {status}";
         format-disabled = "BL";
-        format-connected = "BL {num_connections}";
+        format-connected = "BL {num_connections}con";
         tooltip-format = "{controller_alias}";
         tooltip-format-connected = "{controller_alias}\n{device_enumerate}";
 
@@ -61,11 +64,15 @@
       };
 
       privacy = {
-        icon-size = 14;
+        icon-size = 15;
         modules = [
           { type = "screenshare"; tooltip = false; }
           { type = "audio-in"; tooltip = false; }
         ];
+      };
+
+      battery = {
+        format-full = "";
       };
 
       "custom/wlogout" = {

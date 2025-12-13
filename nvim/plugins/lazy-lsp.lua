@@ -5,16 +5,17 @@ require('lazy-lsp').setup {
     },
     preferred_servers = {
         java = { 'jdtls' },
-        rust = { 'rust_analyzer' },
         c = { 'clangd' },
         cpp = { 'clangd' },
         zig = { 'zls' },
+        rust = { 'rust_analyzer' },
         nix = { 'nixd' },
         markdown = { 'marksman' },
         lua = { 'lua_ls' },
+        haskell = { 'haskell-language-server' },
     },
 
-    prefer_local = true,
+    prefer_local = false,
     default_config = {
         flags = {
             debounce_text_changes = 100,

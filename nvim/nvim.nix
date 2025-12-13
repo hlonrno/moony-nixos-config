@@ -16,11 +16,6 @@ in
       {
         plugin = catppuccin-nvim;
         config = ''
-          augroup user_colors
-            autocmd!
-            autocmd ColorScheme * highlight Normal ctermbg=NONE guibg=NONE
-          augroup END
-
           colorscheme catppuccin-mocha
         '';
       }
@@ -58,7 +53,7 @@ in
       }
       {
         plugin = nvim-cmp;
-        config = toLuaFile ./plugins/nvim-lsp.lua;
+        config = toLuaFile ./plugins/nvim-cmp.lua;
       }
       {
         plugin = nvim-lspconfig;

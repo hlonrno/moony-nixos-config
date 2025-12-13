@@ -1,4 +1,6 @@
-require('lspconfig').rust_analyzer.setup {
+local config = require('lspconfig')
+
+config.rust_analyzer.setup {
     settings = {
         ['rust_analyzer'] = {
             diagnostics = {
