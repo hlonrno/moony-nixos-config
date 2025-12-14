@@ -7,6 +7,7 @@
 
   outputs = { nixpkgs, nixpkgs-unstable, ... }: {
     nixosConfigurations.t = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
       specialArgs = { pkgs-unstable = nixpkgs-unstable; };
       modules = [
         ./configuration.nix

@@ -14,5 +14,6 @@
     active_border_color = "none";
     confirm_os_window_close = 0;
     background_opacity = 0.95;
+    font_family = "family=\"JetBrainsMono Nerd Font\"";
   };
 }

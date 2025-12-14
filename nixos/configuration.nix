@@ -34,6 +34,11 @@
     vivaldi vivaldi-ffmpeg-codecs
   ]);
 
+  fonts.fontconfig.enable = true;
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
+
   services = {
     xserver.enable = true;
     printing.enable = true;

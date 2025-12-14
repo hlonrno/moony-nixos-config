@@ -64,7 +64,7 @@
       };
 
       privacy = {
-        icon-size = 15;
+        icon-size = 14;
         modules = [
           { type = "screenshare"; tooltip = false; }
           { type = "audio-in"; tooltip = false; }
