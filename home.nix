@@ -36,7 +36,7 @@
 
     fzf = {
       enable = true;
-      enableBashIntergation = true;
+      # enableBashIntergation = true;
     };
 
     git = {
@@ -48,7 +48,6 @@
     zoxide = {
       enable = true;
       enableBashIntegration = true;
-      enableZshIntegration = true;
     };
 
     java = {
