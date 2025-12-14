@@ -32,7 +32,12 @@
     wofi = import ./wofi/wofi.nix;
     gh = import ./gh.nix;
     fastfetch = import ./fastfetch.nix;
-    zsh = import ./zsh/zsh.nix;
+    bash = import ./bash.nix;
+
+    fzf = {
+      enable = true;
+      enableBashIntergation = true;
+    };
 
     git = {
       enable = true;
@@ -48,13 +53,8 @@
 
     java = {
       enable = true;
+      # no jdk25 on nixpkgs-25.05;
       package = pkgs-unstable.jdk25;
-    };
-
-    bash.enable = true;
-    bash.shellAliases = {
-      nixswitch = "sudo nixos-rebuild switch --flake ${./nixos}#t";
-      nixtest = "sudo nixos-rebuild test --flake ${./nixos}#t";
     };
 
     obs-studio.enable = true;
