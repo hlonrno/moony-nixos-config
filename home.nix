@@ -30,6 +30,7 @@
     kitty = import ./kitty/kitty.nix;
     hyprlock = import ./hyprland/hyprlock.nix;
     wofi = import ./wofi/wofi.nix;
+    tofi = import ./tofi.nix;
     gh = import ./gh.nix;
     fastfetch = import ./fastfetch.nix;
     bash = import ./bash.nix;
