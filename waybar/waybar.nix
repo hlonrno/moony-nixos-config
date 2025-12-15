@@ -82,7 +82,6 @@
           urgent = 15;
         };
         tooltip-format = "{time}, {power}W, {health}% max";
-        interval = 4;
       };
 
       "custom/wlogout" = {
