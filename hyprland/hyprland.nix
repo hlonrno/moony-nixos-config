@@ -33,8 +33,8 @@
       gaps_in = 0;
       gaps_out = 0;
       border_size = 2;
-      "col.active_border" = "0xffc8c8c8";
-      "col.inactive_border" = "0xff8c8c8c";
+      "col.active_border" = "0xffb8b8b8";
+      "col.inactive_border" = "0xff777777";
       allow_tearing = false;
       layout = "dwindle";
     };
