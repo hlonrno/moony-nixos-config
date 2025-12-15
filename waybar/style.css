@@ -1,28 +1,27 @@
 /*
- * text: (200, 200, 200);
+ * text: (190, 190, 190);
  * 
- * default-background: (40, 40, 40);
- * hover-background: (60, 60, 60);
+ * default-background: (50, 50, 50);
+ * hover-background: (70, 70, 70);
  *
- * default-border: (140, 140, 140);
+ * default-border: (120, 120, 120);
  * important-border: (200, 75, 75);
  */
 
 * {
     font-size: 14px;
     font-family: 'JetBrainsMono Nerd Font';
-    color: rgb(200, 200, 200);
+    color: rgb(190, 190, 190);
     background-color: transparent;
 }
 
 window#waybar {
     margin: 2px 2px 0px 2px;
-    background-color: rgba(40, 40, 40, 0.8);
-    border-color: rgba(100, 100, 100, 0.8);
+    background-color: rgb(50, 50, 50);
+    border-color: rgb(100, 100, 100);
     border-width: 2px;
     border-bottom-style: solid;
 }
-
 #workspaces,
 #workspaces button,
 #window,
@@ -37,20 +36,20 @@ window#waybar {
 #battery,
 #custom-wlogout {
     margin: 1px 2px;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     padding: 0px 9px;
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(50, 50, 50);
     border-style: solid;
     border-radius: 0px; 
     border-width: 2px;
-    border-color: rgb(140, 140, 140);
+    border-color: rgb(120, 120, 120);
 }
 #clock:hover,
 #bluetooth:hover,
 #pulseaudio:hover,
 #backlight:hover,
 #custom-wlogout:hover {
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(70, 70, 70);
 }
 
 #workspaces {
@@ -58,18 +57,19 @@ window#waybar {
 }
 #workspaces button {
     margin: 2px;
-    background-color: rgb(40, 40, 40);
+    padding: 0px 5px;
+    background-color: rgb(50, 50, 50);
 }
 #workspaces button.empty {
     border-color: rgb(90, 90, 90);
 }
 #workspaces button.active {
-    background-color: rgb(60, 60, 60);
+    background-color: rgb(70, 70, 70);
 }
 
-window#waybar.empty #window {
-    background-color: transparent;
-    border-style: none;
+#window {
+    border-color: rgb(30, 30, 30);
+    background-color: rgb(40, 40, 40);
 }
 
 #privacy {
@@ -78,6 +78,11 @@ window#waybar.empty #window {
 #privacy-item.screenshare,
 #privacy-item.audio-in {
     margin: 2px;
+    padding: 0px 5px;
     background-color: rgba(200, 75, 75, 0.4);
     border-color: rgb(200, 75, 75);
+}
+
+#custom-wlogout {
+    padding-right: 12px;
 }

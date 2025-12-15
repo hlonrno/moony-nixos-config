@@ -11,6 +11,7 @@
 
       clock = {
         format = "{:%a, %d.%m.%Yг. %H:%M}";
+        tooltip = false;
       };
 
       "hyprland/workspaces" = {
@@ -22,43 +23,42 @@
       };
 
       "hyprland/window" = {
-        max-length = 200;
+        format = "󰅂 [{class}] {title}";
+        max-length = 120;
       };
 
       network = {
-        format-ethernet = "Eth.";
-        format-wifi = "WiFi";
+        format-ethernet = "󰈀 {signalStrength}";
+        format-wifi = "󰖩 {signalStrength}";
         format-disconnected = "";
         tooltip-format = "{essid}";
       };
 
       bluetooth = {
-        format = "BL {status}";
-        format-disabled = "BL";
-        format-connected = "BL {num_connections}con";
+        format = "";
+        format-enabled = "󰂲 {controller_alias}";
+        format-connected = "󰂱 {num_connections}";
         tooltip-format = "{controller_alias}";
         tooltip-format-connected = "{controller_alias}\n{device_enumerate}";
-
-        on-click = "bluetoothctl power off";
-        on-click-right = "bluetoothctl power on";
       };
 
       pulseaudio = {
         on-click = "pavucontrol";
-        format = "{volume}vol";
-        format-bluetooth = "{volume}vol BL";
+        format = "󰕾 {volume}";
+        format-bluetooth = "󰂰 {volume}";
         tooltip-format = "{desc}";
       };
 
       backlight = {
-        format = "{percent}sun";
+        format = " {percent}";
+        tooltip = false;
         on-scroll-up = "brightnessctl s +5%";
         on-scroll-down = "brightnessctl s 5%-";
       };
 
-
       "hyprland/language" = {
         format = "{}";
+        tooltip = false;
         format-bg = "БДС";
         format-en = "US";
       };
@@ -72,11 +72,22 @@
       };
 
       battery = {
+        format = "󰂎 {capacity}%";
         format-full = "";
+        format-charging = "󰢟 {capacity}%";
+        format-warning = "󱃍 {capacity}%";
+        format-urgent = "󱃍 {time}";
+        states = {
+          warning = 30;
+          urgent = 15;
+        };
+        tooltip-format = "{time}, {power}W, {health}% max";
+        interval = 4;
       };
 
       "custom/wlogout" = {
         format = "⏻";
+        tooltip = false;
         on-click = "wlogout";
       };
     };
