@@ -23,7 +23,7 @@
     default-result-color = "#c8c8c8";
     selection-color = "#c8c8c8";
 
-    prompt-background = "#323232";
+    prompt-background = "#00000000";
     input-background = "#00000000";
     placeholder-background = "#00000000";
     default-result-background = "#00000000";
@@ -33,10 +33,9 @@
     width = "25%";
     height = "40%";
     background-color = "#323232";
-    outline-color = "#080808";
-    border-color = "#c84b4b";
-    outline-width = 3; # px
-    border-width = 7; # px
+    border-color = "#787878";
+    outline-width = 0; # px
+    border-width = 5; # px
 
     padding-top    = 7;
     padding-bottom = 7;
@@ -51,7 +50,7 @@
     prompt-text = ">";
     prompt-padding = 7; # px 
     placeholder-text = "search...";
-    num-results = 12;
+    num-results = 13;
 
     ### Behaviour 
     text-cursor = true;
