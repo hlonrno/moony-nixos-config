@@ -115,7 +115,7 @@
       # e - execute search
       # a - no actions
       # columns: 7, width: 40%; search: fuzzy; show: drun;
-      "SUPER, S, execr, tofi-drun" #wofi -GIieaw 7 -W 40% -M fuzzy --show drun"
+      "SUPER, S, execr, tofi-drun"
       "SUPER SHIFT, E, execr, wofi-emoji"
       "SUPER, V, execr, vivaldi"
       "SUPER, Z, pin, active"
