@@ -130,6 +130,9 @@
       "SUPER, SPACE, togglespecialworkspace, magic"
       "SUPER SHIFT, SPACE, movetoworkspacesilent, special:magic"
 
+      "SUPER, SHIFT, `, execr hyprctl dispatch dpms off"
+      "SUPER, CONTROL, `, execr hyprctl dispatch dpms on"
+
       ", PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm output"
       "SHIFT, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm window"
       "CONTROL, PRINT, exec, hyprshot -zo ~/Pictures/Screenshots -sm region"
