@@ -23,10 +23,10 @@
       "2, monitor:eDP-1, persistent:true"
       "3, monitor:eDP-1, persistent:true"
       "4, monitor:eDP-1, persistent:true"
-      "5, monitor:HDMI-1, persistent:true"
-      "6, monitor:HDMI-1, persistent:true"
-      "7, monitor:HDMI-1, persistent:true"
-      "8, monitor:HDMI-1, persistent:true"
+      "5, monitor:HDMI-A-1, persistent:true"
+      "6, monitor:HDMI-A-1, persistent:true"
+      "7, monitor:HDMI-A-1, persistent:true"
+      "8, monitor:HDMI-A-1, persistent:true"
     ];
 
     general = {
@@ -70,7 +70,7 @@
     };
 
     input = {
-      kb_layout = "us,bg";
+      kb_layout = "us,bg(phonetic)";
       kb_options = "grp:alt_space_toggle";
       repeat_rate = 90;
       repeat_delay = 300;
@@ -121,6 +121,7 @@
       "SUPER, Z, pin, active"
       "SUPER, A, execr, krita"
       "SUPER, B, execr, hyprlock"
+      "SUPER, Z, execr, woomer"
 
       "SUPER, H, movefocus, l"
       "SUPER, L, movefocus, r"

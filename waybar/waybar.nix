@@ -18,7 +18,7 @@
         format = "{icon}";
         "persistent-workspaces" = {
           "eDP-1" = [ 1 2 3 4 ];
-          "HDMI-1" = [ 5 6 7 8 ];
+          "HDMI-A-1" = [ 5 6 7 8 ];
         };
       };
 

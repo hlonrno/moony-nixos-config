@@ -18,6 +18,7 @@
     gnumake
     bibata-cursors
     vesktop
+    woomer
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };
