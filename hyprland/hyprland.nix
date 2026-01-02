@@ -1,7 +1,7 @@
 { ... }: {
   enable = true;
   settings = {
-    monitor = [ "eDP-1,1920x1080,0x0,1" ",preferred,auto-left,auto" ];
+    monitor = [ "eDP-1,1920x1080,0x0,1" "HDMI-A-1,preferred,auto-left,1" ];
     exec-once = [
       "waybar"
       "hyprpaper"
@@ -131,6 +131,7 @@
       "SUPER, SPACE, togglespecialworkspace, magic"
       "SUPER SHIFT, SPACE, movetoworkspacesilent, special:magic"
 
+      "SUPER SHIFT CONTROL, 0, execr, hyprctl dispatch dpms off eDP-1"
       "SUPER SHIFT, 0, execr, hyprctl dispatch dpms off"
       "SUPER, 0, execr, hyprctl dispatch dpms on"
 
