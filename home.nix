@@ -19,6 +19,7 @@
     bibata-cursors
     vesktop
     woomer
+    btop
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };
@@ -37,7 +38,6 @@
 
     fzf = {
       enable = true;
-      # enableBashIntergation = true;
     };
 
     git = {
@@ -53,7 +53,7 @@
 
     java = {
       enable = true;
-      # no jdk25 on nixpkgs-25.05;
+      # no jdk25 on nixpkgs-25.05; # 25-11;
       package = pkgs-unstable.jdk25;
     };
 
