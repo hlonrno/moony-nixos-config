@@ -7,6 +7,7 @@
       "hyprpaper"
       "systemctl --user start hyprpolkitagent"
       "rfkill unblock bluetooth"
+      "hyprctl dispatch workspace 1 && vivaldi"
     ];
 
     env = [
