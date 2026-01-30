@@ -28,6 +28,7 @@
   programs = {
     neovim = import ./nvim/nvim.nix { inherit pkgs; };
     tmux = import ./tmux/tmux.nix { inherit pkgs; };
+    emacs = import ./emacs/emacs.nix { inherit pkgs; };
     waybar = import ./waybar/waybar.nix;
     kitty = import ./kitty/kitty.nix;
     hyprlock = import ./hyprland/hyprlock.nix;
