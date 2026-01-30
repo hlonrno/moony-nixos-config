@@ -1,6 +1,6 @@
 { pkgs }: {
-  enabe = true;
-  extraConfix = builtins.readFile ./emacs;
+  enable = true;
+  extraConfig = builtins.readFile ./emacs;
   extraPackages = epkgs: [
 
   ];
