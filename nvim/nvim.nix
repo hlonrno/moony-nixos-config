@@ -15,7 +15,7 @@ in
       gruber-darker-nvim
       {
         plugin = catppuccin-nvim;
-        config = "colorscheme catppuccin-mocha";
+        config = "colorscheme catppuccin-macchiato";
       }
       {
         plugin = nvim-treesitter;
