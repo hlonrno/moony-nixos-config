@@ -1,6 +1,6 @@
 {
   enable = true;
-  extraConfig = builtins.readFile ./Catppuccin-Mocha.conf;
+  extraConfig = builtins.readFile ./macchiato.conf;
   settings = {
     cursor_shape = "underline";
     cursor_blink_interval = -1;
