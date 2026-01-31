@@ -1,5 +1,4 @@
-{ pkgs }:
-let
+{ pkgs }: let
   toLua = code: "lua << EOF\n${code}\nEOF\n";
   toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
 in
@@ -13,11 +12,10 @@ in
     extraLuaConfig = builtins.readFile ./init.lua;
 
     plugins = with pkgs.vimPlugins; [
+      gruber-darker-nvim
       {
         plugin = catppuccin-nvim;
-        config = ''
-          colorscheme catppuccin-mocha
-        '';
+        config = "colorscheme catppuccin-mocha";
       }
       {
         plugin = nvim-treesitter;
@@ -34,10 +32,6 @@ in
       {
         plugin = ts-comments-nvim;
         config = toLua "require('ts-comments').setup{}";
-      }
-      {
-        plugin = trouble-nvim;
-        config = toLuaFile ./plugins/trouble.lua;
       }
       {
         plugin = todo-comments-nvim;
