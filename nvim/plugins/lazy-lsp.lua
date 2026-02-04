@@ -12,13 +12,12 @@ require('lazy-lsp').setup {
         nix = { 'nixd' },
         markdown = { 'marksman' },
         lua = { 'lua_ls' },
-        haskell = { 'haskell-language-server' },
     },
 
-    prefer_local = false,
+    prefer_local = true,
     default_config = {
         flags = {
-            debounce_text_changes = 100,
+            debounce_text_changes = 500,
         },
 
         on_attach = function(_, bufnr)
@@ -40,5 +39,15 @@ require('lazy-lsp').setup {
             vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-.>', '<cmd>lua vim.lsp.buf.completion()<cr>', opts)
         end,
         capabilities = require('cmp_nvim_lsp').default_capabilities(),
+    },
+
+    servers = {
+        hls = {
+            cmd = { 'haskell-language-server-wrapper', '--lsp' },
+            filetypes = { 'haskell' },
+            root_dir = require('lspconfig.util').root_pattern(
+                '.git'
+            ),
+        },
     },
 }
