@@ -72,7 +72,7 @@
 
     input = {
       kb_layout = "us,bg(phonetic)";
-      kb_options = "grp:alt_space_toggle";
+      kb_options = "grp:alt_space_toggle, caps:swapescape";
       repeat_rate = 90;
       repeat_delay = 300;
       numlock_by_default = false;
