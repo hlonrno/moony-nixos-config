@@ -1,4 +1,4 @@
-{pkgs, pkgs-unstable, ... }:
+{pkgs, pkgs-unstable, pkgs-latest, ... }:
 {
   home.stateVersion = "25.05";
   home.homeDirectory = "/home/moony";
@@ -20,6 +20,8 @@
     vesktop
     woomer
     btop
+    zeal
+    ghc
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };
@@ -54,8 +56,7 @@
 
     java = {
       enable = true;
-      # no jdk25 on nixpkgs-25.05; # 25-11;
-      package = pkgs-unstable.jdk25;
+      package = pkgs-latest.jdk25;
     };
 
     obs-studio.enable = true;
