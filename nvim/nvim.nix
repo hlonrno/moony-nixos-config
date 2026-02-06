@@ -12,7 +12,6 @@ in
     extraLuaConfig = builtins.readFile ./init.lua;
 
     plugins = with pkgs.vimPlugins; [
-      gruber-darker-nvim
       {
         plugin = catppuccin-nvim;
         config = "colorscheme catppuccin-macchiato";

@@ -1,13 +1,12 @@
-{ pkgs, pkgs-unstable, ... }: {
-  imports = [
-    ./hardware-configuration.nix
-  ];
-  
-  virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "moony" ];
+{ pkgs, latest, unstable, ... }@args:
+{
+  imports = [ ./hardware-configuration.nix ];
 
   environment.systemPackages = with pkgs; [
     neovim
+    file
+    tree
+    unzip
     haruna
     loupe
     nautilus
@@ -30,8 +29,8 @@
     jq
     libnotify
     libsForQt5.qt5ct
-  ] ++ (with pkgs-unstable; [
-    vivaldi vivaldi-ffmpeg-codecs
+  ] ++ (with unstable; [
+    # vivaldi vivaldi-ffmpeg-codecs
   ]);
 
   fonts.fontconfig.enable = true;
@@ -41,12 +40,18 @@
 
   services = {
     xserver.enable = true;
-    printing.enable = true;
     blueman.enable = true;
     openssh.enable = true;
-    flatpak.enable = true;
     libinput.enable = false;
     pulseaudio.enable = false;
+
+    kanata = {
+      enable = true;
+      keyboards.kb = {
+        extraDefCfg = "process-unmapped-keys yes";
+        config = builtins.readFile ./config.kbd;
+      };
+    };
 
     displayManager.autoLogin = {
       enable = true;
@@ -64,6 +69,11 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
+  };
+
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    WLR_NO_HARDWARE_CURSORS = "1";
   };
 
   programs = {
@@ -90,6 +100,7 @@
     graphics.enable = true;
   };
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -98,14 +109,9 @@
   security.rtkit.enable = true;
   users.users.moony = {
     isNormalUser = true;
-    description = "Moony";
+    description = "moony";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = [ ];
-  };
-
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    WLR_NO_HARDWARE_CURSORS = "1";
+    packages = [];
   };
 
   time.timeZone = "Europe/Sofia";
@@ -122,7 +128,11 @@
     LC_TIME = "bg_BG.UTF-8";
   };
 
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = pkg:
+  builtins.elem (args.lib.getName pkg) [
+    "vivaldi"
+    "vivaldi-ffmpeg-codecs"
+  ];
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.11";
 }
