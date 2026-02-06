@@ -11,7 +11,7 @@
     };
   };
 
-  outputs = { lib, nixpkgs, nixpkgs-latest, nixpkgs-unstable, home-manager, ... }:
+  outputs = { nixpkgs, nixpkgs-latest, nixpkgs-unstable, home-manager, ... }:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -19,7 +19,7 @@
     unstable = import nixpkgs-unstable magic;
     magic = {
       inherit system;
-      config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+      config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
         "vivaldi"
         "vivaldi-ffmpeg-codecs"
       ];
