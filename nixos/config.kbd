@@ -1,9 +1,8 @@
 (defsrc)
 (deflayermap (default-layer)
   caps esc
-  esc  caps
-  d    (tap-hold 150 150 d lctrl)
-  f    (tap-hold 150 150 f lsft)
-  j    (tap-hold 150 150 j rsft)
-  k    (tap-hold 150 150 k rctrl)
+  d    (tap-hold 200 200 d lctrl)
+  f    (tap-hold 200 200 f lsft)
+  j    (tap-hold 200 200 j rsft)
+  k    (tap-hold 200 200 k rctrl)
 )

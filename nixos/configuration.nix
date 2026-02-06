@@ -128,11 +128,7 @@
     LC_TIME = "bg_BG.UTF-8";
   };
 
-  nixpkgs.config.allowUnfreePredicate = pkg:
-  builtins.elem (args.lib.getName pkg) [
-    "vivaldi"
-    "vivaldi-ffmpeg-codecs"
-  ];
+  nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.11";
 }
