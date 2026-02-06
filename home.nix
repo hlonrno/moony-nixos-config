@@ -1,4 +1,4 @@
-{ pkgs, unstable, latest, ... }:
+{ pkgs, latest, ... }:
 {
   home.stateVersion = "25.05";
   home.homeDirectory = "/home/moony";
@@ -10,12 +10,12 @@
   };
 
   home.packages = with pkgs; [
-    ffmpeg
     radeontop
     # gnumake
     btop
     ghc
     fzf
+    wofi-emoji
     bibata-cursors
     # blender
     # krita
