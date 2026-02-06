@@ -1,27 +1,28 @@
-{pkgs, pkgs-unstable, pkgs-latest, ... }:
+{ pkgs, unstable, latest, ... }:
 {
   home.stateVersion = "25.05";
   home.homeDirectory = "/home/moony";
   home.username = "moony";
   home.file = import ./files/main.nix;
-  home.sessionVariables.EDITOR = "nvim";
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    H2 = "$HOME/home";
+  };
 
   home.packages = with pkgs; [
-    blender
     ffmpeg
-    file
-    krita
     radeontop
-    tree
-    unzip
-    lorien
-    gnumake
+    # gnumake
+    btop
+    ghc
+    fzf
     bibata-cursors
+    # blender
+    # krita
+    # lorien
     vesktop
     woomer
-    btop
     zeal
-    ghc
   ];
 
   wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };
@@ -39,10 +40,6 @@
     fastfetch = import ./fastfetch.nix;
     bash = import ./bash.nix;
 
-    fzf = {
-      enable = true;
-    };
-
     git = {
       enable = true;
       userEmail = "moony25@proton.me";
@@ -56,7 +53,7 @@
 
     java = {
       enable = true;
-      package = pkgs-latest.jdk25;
+      package = latest.jdk25;
     };
 
     obs-studio.enable = true;

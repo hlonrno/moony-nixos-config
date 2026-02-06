@@ -10,10 +10,10 @@
       "hyprctl dispatch workspace 1 && vivaldi"
     ];
 
-    env = [
-      "XCURSOR_THEME, Bibata-Modern-Ice"
-      "XCURSOR_SIZE, 24"
-    ];
+    env = {
+      XCURSOR_THEME = "Bibata-Modern-Ice";
+      XCURSOR_SIZE = 24;
+    };
 
     decoration = {
       rounding = 0;
@@ -72,7 +72,7 @@
 
     input = {
       kb_layout = "us,bg(phonetic)";
-      kb_options = "grp:alt_space_toggle, caps:swapescape";
+      kb_options = "grp:alt_space_toggle";
       repeat_rate = 90;
       repeat_delay = 300;
       numlock_by_default = false;
