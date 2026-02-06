@@ -11,17 +11,24 @@
     };
   };
 
-  outputs = { nixpkgs, nixpkgs-latest, nixpkgs-unstable, home-manager, ... }:
+  outputs = { lib, nixpkgs, nixpkgs-latest, nixpkgs-unstable, home-manager, ... }:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
-    latest = nixpkgs-latest.legacyPackages.${system};
-    unstable = nixpkgs-unstable.legacyPackages.${system};
+    latest = import nixpkgs-latest magic;
+    unstable = import nixpkgs-unstable magic;
+    magic = {
+      inherit system;
+      config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+        "vivaldi"
+        "vivaldi-ffmpeg-codecs"
+      ];
+    };
   in
   {
 
     nixosConfigurations.moony = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      inherit system;
       specialArgs = { inherit unstable; inherit latest; };
       modules = [ ./nixos/configuration.nix ];
     };

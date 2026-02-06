@@ -1,10 +1,9 @@
-{ pkgs, latest, unstable, ... }@args:
+{ pkgs, latest, ... }:
 {
   imports = [ ./hardware-configuration.nix ];
 
   environment.systemPackages = with pkgs; [
     neovim
-    file
     tree
     unzip
     haruna
@@ -12,8 +11,10 @@
     nautilus
     speedcrunch
     kitty
-
+    ffmpeg
+    file
     brightnessctl
+
     hyprcursor
     hyprpaper
     hyprshot
@@ -21,16 +22,15 @@
     hyprpolkitagent
     pavucontrol
     wl-clipboard
-    wofi
-    wofi-emoji
     wlogout
     bluez
     dunst
     jq
     libnotify
     libsForQt5.qt5ct
-  ] ++ (with unstable; [
-    # vivaldi vivaldi-ffmpeg-codecs
+  ] ++ (with latest; [
+    vivaldi
+    vivaldi-ffmpeg-codecs
   ]);
 
   fonts.fontconfig.enable = true;
@@ -128,7 +128,6 @@
     LC_TIME = "bg_BG.UTF-8";
   };
 
-  nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   system.stateVersion = "25.11";
 }
