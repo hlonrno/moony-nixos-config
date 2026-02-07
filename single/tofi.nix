@@ -1,8 +1,7 @@
 {
-  enable = true;
   settings = {
     # Font
-    font = toString ./JetBrainsMonoNerdFont-Regular.ttf;
+    font = toString ../JetBrainsMonoNerdFont-Regular.ttf;
     font-size = 17; # pt
 
     # Text theming 

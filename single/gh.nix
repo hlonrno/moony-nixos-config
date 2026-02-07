@@ -1,5 +1,4 @@
 {
-  enable = true;
   gitCredentialHelper.hosts = [ "https://github.com" ];
 
   settings = {
@@ -9,6 +8,7 @@
       pc = "pr checkout";
       pv = "pr view";
       rv = "repo view";
+      rc = "repo clone";
     };
   };
 }

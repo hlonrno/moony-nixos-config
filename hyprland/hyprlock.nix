@@ -1,5 +1,4 @@
-{
-  enable = true;
+_: {
   settings = {
     general = {
       grace = 0;
