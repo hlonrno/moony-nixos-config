@@ -7,13 +7,15 @@
       "hyprpaper"
       "systemctl --user start hyprpolkitagent"
       "rfkill unblock bluetooth"
-      "hyprctl dispatch workspace 1 && vivaldi"
+      "hyprctl dispatch workspace 1"
     ];
 
-    env = {
-      XCURSOR_THEME = "Bibata-Modern-Ice";
-      XCURSOR_SIZE = 24;
-    };
+    env = [
+      "HYPRCURSOR_THEME, Bibata-Modern-Ice"
+      "HYPRCURSOR_SIZE, 24"
+      "XCURSOR_THEME, Bibata-Modern-Ice"
+      "XCURSOR_SIZE, 24"
+    ];
 
     decoration = {
       rounding = 0;
