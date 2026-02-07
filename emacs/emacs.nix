@@ -1,5 +1,4 @@
-{ pkgs }: {
-  enable = true;
+pkgs: {
   extraConfig = builtins.readFile ./emacs.el;
   # NOTE: for vim-nix autocompletion of pkg names.
   extraPackages = _: with pkgs.emacsPackages; [

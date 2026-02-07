@@ -1,12 +1,8 @@
 {
-  enable = true;
   shellAliases = {
     homeswitch = "home-manager switch";
     ".." = "cd ..";
   };
-
-  initExtra = ''
-  '';
 
   bashrcExtra = ''
     if [ $EUID == 0 ]; then

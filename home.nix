@@ -1,4 +1,8 @@
 { pkgs, latest, ... }:
+let
+  enable = a: a // { enabled = true; };
+  # disable = a: a // { enabled = false; };
+in
 {
   home.stateVersion = "25.05";
   home.homeDirectory = "/home/moony";
@@ -12,7 +16,7 @@
   home.packages = with pkgs; [
     radeontop
     # gnumake
-    btop
+    htop
     ghc
     fzf
     wofi-emoji
@@ -25,20 +29,20 @@
     zeal
   ];
 
-  wayland.windowManager.hyprland = import ./hyprland/hyprland.nix { inherit pkgs; };
-  services.hyprpaper = import ./hyprland/hyprpaper.nix;
+  wayland.windowManager.hyprland = enable (import ./hyprland/hyprland.nix pkgs);
+  services.hyprpaper             = enable (import ./hyprland/hyprpaper.nix pkgs);
 
   programs = {
-    neovim = import ./nvim/nvim.nix { inherit pkgs; };
-    tmux = import ./tmux/tmux.nix { inherit pkgs; };
-    emacs = import ./emacs/emacs.nix { inherit pkgs; };
-    waybar = import ./waybar/waybar.nix;
-    kitty = import ./kitty/kitty.nix;
-    hyprlock = import ./hyprland/hyprlock.nix;
-    tofi = import ./tofi.nix;
-    gh = import ./gh.nix;
-    fastfetch = import ./fastfetch.nix;
-    bash = import ./bash.nix;
+    neovim    = enable (import ./nvim/nvim.nix pkgs);
+    tmux      = enable (import ./tmux/tmux.nix pkgs);
+    emacs     = enable (import ./emacs/emacs.nix pkgs);
+    waybar    = enable (import ./waybar/waybar.nix pkgs);
+    kitty     = enable (import ./kitty/kitty.nix pkgs);
+    hyprlock  = enable (import ./hyprland/hyprlock.nix pkgs);
+    tofi      = enable (import ./single/tofi.nix);
+    gh        = enable (import ./single/gh.nix);
+    fastfetch = enable (import ./single/fastfetch.nix);
+    bash      = enable (import ./single/bash.nix);
 
     git = {
       enable = true;

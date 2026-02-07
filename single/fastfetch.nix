@@ -1,5 +1,4 @@
 {
-  enable = true;
   settings = {
     modules = [
       "title"

@@ -1,5 +1,4 @@
-{
-  enable = true;
+_: {
   extraConfig = builtins.readFile ./macchiato.conf;
   settings = {
     cursor_shape = "underline";

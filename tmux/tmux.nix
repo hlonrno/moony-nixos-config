@@ -1,5 +1,4 @@
-{ pkgs, ... }: {
-  enable = true;
+pkgs: {
   clock24 = true;
   disableConfirmationPrompt = true;
   keyMode = "vi";
