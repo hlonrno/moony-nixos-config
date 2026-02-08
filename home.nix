@@ -1,7 +1,7 @@
 { pkgs, latest, ... }:
 let
-  enable = a: a // { enabled = true; };
-  # disable = a: a // { enabled = false; };
+  enable = atr: atr // { enable = true; };
+  # disable = atr: atr // { enable = false; };
 in
 {
   home.stateVersion = "25.05";
@@ -15,18 +15,18 @@ in
 
   home.packages = with pkgs; [
     radeontop
-    # gnumake
-    htop
-    ghc
-    fzf
+    jq
     wofi-emoji
     bibata-cursors
-    # blender
-    # krita
-    # lorien
     vesktop
     woomer
     zeal
+    hyprcursor
+    hyprpaper
+    hyprshot
+    hyprpicker
+    # krita
+    # lorien
   ];
 
   wayland.windowManager.hyprland = enable (import ./hyprland/hyprland.nix pkgs);

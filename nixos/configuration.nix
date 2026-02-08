@@ -4,28 +4,24 @@
 
   environment.systemPackages = with pkgs; [
     neovim
-    tree
-    unzip
     haruna
     loupe
     nautilus
     speedcrunch
     kitty
+    tree
+    unzip
     ffmpeg
+    htop
     file
-    brightnessctl
 
-    hyprcursor
-    hyprpaper
-    hyprshot
-    hyprpicker
+    brightnessctl
     hyprpolkitagent
     pavucontrol
     wl-clipboard
     wlogout
     bluez
     dunst
-    jq
     libnotify
     libsForQt5.qt5ct
   ] ++ (with latest; [
