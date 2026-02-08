@@ -33,7 +33,7 @@ in
   services.hyprpaper             = enable (import ./hyprland/hyprpaper.nix pkgs);
 
   programs = {
-    neovim    = enable (import ./nvim/nvim.nix pkgs);
+    neovim    = enable (import ./neovim/neovim.nix pkgs);
     tmux      = enable (import ./tmux/tmux.nix pkgs);
     emacs     = enable (import ./emacs/emacs.nix pkgs);
     waybar    = enable (import ./waybar/waybar.nix pkgs);
