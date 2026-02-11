@@ -1,5 +1,3 @@
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 vim.o.updatetime = 100;
 vim.opt.termguicolors = true
 
