@@ -41,6 +41,10 @@ in
       config = toLuaFile ./plugins/nvim-tree.lua;
     }
     {
+      plugin = oil-nvim;
+      config = toLuaFile ./plugins/oil.lua;
+    }
+    {
       plugin = telescope-nvim;
       config = toLuaFile ./plugins/telescope.lua;
     }
