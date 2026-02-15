@@ -40,6 +40,7 @@
     openssh.enable = true;
     libinput.enable = false;
     pulseaudio.enable = false;
+    flatpak.enable = true;
 
     kanata = {
       enable = true;
