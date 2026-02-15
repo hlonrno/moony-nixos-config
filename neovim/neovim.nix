@@ -37,10 +37,6 @@ in
       config = toLuaFile ./plugins/todo-comments.lua;
     }
     {
-      plugin = nvim-tree-lua;
-      config = toLuaFile ./plugins/nvim-tree.lua;
-    }
-    {
       plugin = oil-nvim;
       config = toLuaFile ./plugins/oil.lua;
     }
