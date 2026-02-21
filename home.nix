@@ -46,7 +46,7 @@ in
 
     librewolf = {
       enable = true;
-      package = latest.librewolf-wayland;
+      package = pkgs.librewolf-wayland;
       settings = { "identitiy.fxaccounts.enabled" = true; };
     };
 
