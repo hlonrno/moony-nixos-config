@@ -20,7 +20,6 @@ in
     bibata-cursors
     vesktop
     woomer
-    librewolf-wayland
     zeal
     hyprcursor
     hyprpaper
@@ -44,6 +43,12 @@ in
     gh        = enable (import ./single/gh.nix);
     fastfetch = enable (import ./single/fastfetch.nix);
     bash      = enable (import ./single/bash.nix);
+
+    librewolf = {
+      enable = true;
+      package = latest.librewolf-wayland;
+      settings = { "identitiy.fxaccounts.enabled" = true; };
+    };
 
     git = {
       enable = true;
