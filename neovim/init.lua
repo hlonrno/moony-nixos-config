@@ -44,6 +44,11 @@ vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 vim.api.nvim_set_keymap('v', '<', '<gv', opts)
 vim.api.nvim_set_keymap('v', '>', '>gv', opts)
 
+vim.api.nvim_set_keymap('n', '<leader>{', '{zb', opts)
+vim.api.nvim_set_keymap('n', '<leader>}', '}zb', opts)
+vim.api.nvim_set_keymap('n', '<leader>[', '{zt', opts)
+vim.api.nvim_set_keymap('n', '<leader>]', '}zt', opts)
+
 vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-r><C-p><CR>', opts);
 vim.api.nvim_set_keymap('n', '<leader>E', ':q | e <C-r><C-p><CR>', opts);
 vim.api.nvim_set_keymap('v', '<leader>e', 'y:e <C-r>0<CR>', opts);

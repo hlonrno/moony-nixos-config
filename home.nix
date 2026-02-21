@@ -20,6 +20,7 @@ in
     bibata-cursors
     vesktop
     woomer
+    librewolf-wayland
     zeal
     hyprcursor
     hyprpaper
