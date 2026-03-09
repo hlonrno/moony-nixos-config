@@ -72,7 +72,7 @@ _: {
     };
 
     input = {
-      kb_layout = "us,bg(phonetic)";
+      kb_layout = "us,bg";
       kb_options = "grp:alt_space_toggle";
       repeat_rate = 90;
       repeat_delay = 300;
