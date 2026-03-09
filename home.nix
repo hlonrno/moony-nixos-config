@@ -25,7 +25,7 @@ in
     hyprpaper
     hyprshot
     hyprpicker
-    # krita
+    krita
     # lorien
   ];
 
