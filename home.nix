@@ -25,6 +25,7 @@ in
     hyprpaper
     hyprshot
     hyprpicker
+    element-desktop
     krita
     # lorien
   ];
