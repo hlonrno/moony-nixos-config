@@ -16,6 +16,7 @@ in
   home.packages = with pkgs; [
     radeontop
     jq
+    grc
     wofi-emoji
     bibata-cursors
     vesktop
