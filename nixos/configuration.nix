@@ -15,6 +15,9 @@
     htop
     file
 
+    glib
+    gsettings-desktop-schemas
+
     brightnessctl
     hyprpolkitagent
     pavucontrol
