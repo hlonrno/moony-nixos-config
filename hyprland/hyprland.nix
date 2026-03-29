@@ -120,7 +120,7 @@ _: {
       "SUPER, S, execr, tofi-drun"
       "SUPER SHIFT, E, execr, wofi-emoji"
       "SUPER, V, execr, vivaldi"
-      "SUPER, Z, pin, active"
+      "SUPER SHIFT, Z, pin, active"
       "SUPER, A, execr, krita"
       "SUPER, B, execr, hyprlock"
       "SUPER, Z, execr, woomer"
