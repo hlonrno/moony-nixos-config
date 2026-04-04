@@ -16,6 +16,7 @@ in
   home.packages = with pkgs; [
     radeontop
     jq
+    gcc
     grc
     wofi-emoji
     bibata-cursors
