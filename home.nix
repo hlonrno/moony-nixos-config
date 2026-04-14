@@ -28,8 +28,7 @@ in
     hyprshot
     hyprpicker
     element-desktop
-    krita
-    # lorien
+    gimp
   ];
 
   wayland.windowManager.hyprland = enable (import ./hyprland/hyprland.nix pkgs);
