@@ -18,6 +18,7 @@ in
     jq
     gcc
     grc
+    gnumake
     wofi-emoji
     bibata-cursors
     vesktop
