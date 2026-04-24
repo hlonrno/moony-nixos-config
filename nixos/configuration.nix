@@ -78,6 +78,7 @@
 
   programs = {
     mtr.enable = true;
+    nix-ld.enable = true;
     hyprland = {
       enable = true;
       xwayland.enable = true;
