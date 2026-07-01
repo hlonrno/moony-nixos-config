@@ -10,7 +10,6 @@ in
   home.file = import ./files/main.nix;
   home.sessionVariables = {
     EDITOR = "nvim";
-    H2 = "$HOME/home";
   };
 
   home.packages = with pkgs; [

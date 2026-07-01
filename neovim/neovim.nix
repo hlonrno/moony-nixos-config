@@ -61,5 +61,6 @@ in
     vim-fugitive
     cmp-nvim-lsp
     vim-nix
+    trouble-nvim
   ];
 }

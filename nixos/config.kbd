@@ -1,4 +1,5 @@
 (defsrc)
 (deflayermap (default-layer)
   caps (tap-hold 200 200 esc lctrl)
+  esc  caps
 )
