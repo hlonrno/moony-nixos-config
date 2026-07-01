@@ -42,7 +42,6 @@
     blueman.enable = true;
     openssh.enable = true;
     libinput.enable = false;
-    pulseaudio.enable = false;
     flatpak.enable = true;
 
     kanata = {
@@ -63,6 +62,7 @@
       variant = "";
     };
     
+    pulseaudio.enable = false;
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -79,10 +79,12 @@
   programs = {
     mtr.enable = true;
     nix-ld.enable = true;
+
     hyprland = {
       enable = true;
       xwayland.enable = true;
     };
+
     gnupg.agent = {
       enable = true;
       enableSSHSupport = true;
@@ -101,7 +103,7 @@
     graphics.enable = true;
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = latest.linuxPackages_latest;
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
