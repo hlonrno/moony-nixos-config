@@ -14,6 +14,8 @@ in
 
   home.packages = with pkgs; [
     radeontop
+    jujutsu
+    jjui
     jq
     gcc
     grc
