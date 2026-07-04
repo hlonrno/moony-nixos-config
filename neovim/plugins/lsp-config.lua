@@ -1,4 +1,4 @@
-local config = vim.lsp.config() -- require('lspconfig')
+local config = vim.lsp.config -- require('lspconfig')
 
 config.rust_analyzer.setup {
     settings = {

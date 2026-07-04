@@ -1,4 +1,5 @@
 require('lazy-lsp').setup {
+    use_vim_lsp_config = true,
     excluded_servers = {
         'ccls', 'denols', 'docker_compose_language_service',
         'flow', 'ltex', 'quick_lint_js', 'scry', 'tailwindcss'
@@ -7,8 +8,6 @@ require('lazy-lsp').setup {
         java = { 'jdtls' },
         c = { 'clangd' },
         cpp = { 'clangd' },
-        zig = { 'zls' },
-        rust = { 'rust_analyzer' },
         nix = { 'nixd' },
         markdown = { 'marksman' },
         lua = { 'lua_ls' },
@@ -41,13 +40,11 @@ require('lazy-lsp').setup {
         capabilities = require('cmp_nvim_lsp').default_capabilities(),
     },
 
-    servers = {
-        hls = {
-            cmd = { 'haskell-language-server-wrapper', '--lsp' },
-            filetypes = { 'haskell' },
-            root_dir = require('lspconfig.util').root_pattern(
-                '.git'
-            ),
-        },
-    },
+    -- servers = {
+    --     hls = {
+    --         cmd = { 'haskell-language-server-wrapper', '--lsp' },
+    --         filetypes = { 'haskell' },
+    --         root_dir = vim.lsp.util.root_pattern('.git'),
+    --     },
+    -- },
 }
