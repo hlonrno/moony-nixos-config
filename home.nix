@@ -35,7 +35,7 @@ in
   ];
 
   # wayland.windowManager.hyprland = enable (import ./hyprland/hyprland.nix pkgs);
-  services.hyprpaper             = enable (import ./hyprland/hyprpaper.nix pkgs);
+  # services.hyprpaper             = enable (import ./hyprland/hyprpaper.nix pkgs);
 
   programs = {
     neovim    = enable (import ./neovim/neovim.nix pkgs);
