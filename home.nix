@@ -4,7 +4,7 @@ let
   # disable = atr: atr // { enable = false; };
 in
 {
-  home.stateVersion = "25.05";
+  home.stateVersion = "26.05";
   home.homeDirectory = "/home/moony";
   home.username = "moony";
   home.file = import ./files/main.nix;
@@ -31,9 +31,10 @@ in
     hyprpicker
     element-desktop
     gimp
+    ripgrep
   ];
 
-  wayland.windowManager.hyprland = enable (import ./hyprland/hyprland.nix pkgs);
+  # wayland.windowManager.hyprland = enable (import ./hyprland/hyprland.nix pkgs);
   services.hyprpaper             = enable (import ./hyprland/hyprpaper.nix pkgs);
 
   programs = {
@@ -47,17 +48,12 @@ in
     gh        = enable (import ./single/gh.nix);
     fastfetch = enable (import ./single/fastfetch.nix);
     bash      = enable (import ./single/bash.nix);
-
-    librewolf = {
-      enable = true;
-      package = pkgs.librewolf-wayland;
-      settings = { "identitiy.fxaccounts.enabled" = true; };
-    };
+    librewolf = enable (import ./librewolf/librewolf.nix);
 
     git = {
       enable = true;
-      userEmail = "moony25@proton.me";
-      userName = "hlonrno";
+      settings.user.email = "moony25@proton.me";
+      settings.user.name = "hlonrno";
     };
 
     zoxide = {
