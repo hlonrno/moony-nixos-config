@@ -57,21 +57,25 @@ in
       type = "viml";
       config = toLuaFile ./plugins/nvim-cmp.lua;
     }
-    # {
-    #   plugin = nvim-lspconfig;
-    #   type = "viml";
-    #   config = toLuaFile ./plugins/lsp-config.lua;
-    # }
+    {
+      plugin = nvim-lspconfig;
+      type = "viml";
+      config = toLuaFile ./plugins/lsp-config.lua;
+    }
     {
       plugin = vim-tmux-navigator;
       type = "viml";
       config = toLuaFile ./plugins/vim-tmux-navigator.lua;
+    }
+    {
+      plugin = trouble-nvim;
+      type = "viml";
+      config = toLuaFile ./plugins/trouble.lua;
     }
 
     vim-visual-multi
     vim-fugitive
     cmp-nvim-lsp
     vim-nix
-    trouble-nvim
   ];
 }
