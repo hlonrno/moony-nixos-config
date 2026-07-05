@@ -58,11 +58,6 @@ in
       config = toLuaFile ./plugins/nvim-cmp.lua;
     }
     {
-      plugin = nvim-lspconfig;
-      type = "viml";
-      config = toLuaFile ./plugins/lsp-config.lua;
-    }
-    {
       plugin = vim-tmux-navigator;
       type = "viml";
       config = toLuaFile ./plugins/vim-tmux-navigator.lua;

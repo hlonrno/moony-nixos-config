@@ -44,7 +44,7 @@ require('lazy-lsp').setup {
         hls = {
             cmd = { 'haskell-language-server-wrapper', '--lsp' },
             filetypes = { 'haskell' },
-            root_dir = require('lspconfig').root_pattern('.git'),
+            -- root_dir = require('lspconfig').root_pattern('.git'),
         },
     },
 }
