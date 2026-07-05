@@ -40,11 +40,11 @@ require('lazy-lsp').setup {
         capabilities = require('cmp_nvim_lsp').default_capabilities(),
     },
 
-    -- servers = {
-    --     hls = {
-    --         cmd = { 'haskell-language-server-wrapper', '--lsp' },
-    --         filetypes = { 'haskell' },
-    --         root_dir = vim.lsp.util.root_pattern('.git'),
-    --     },
-    -- },
+    servers = {
+        hls = {
+            cmd = { 'haskell-language-server-wrapper', '--lsp' },
+            filetypes = { 'haskell' },
+            root_dir = require('lspconfig').root_pattern('.git'),
+        },
+    },
 }
