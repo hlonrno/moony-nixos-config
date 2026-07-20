@@ -43,6 +43,7 @@ vim.api.nvim_set_keymap('n', '<C-Right>', ':vertical resize +2<CR>', opts)
 
 vim.api.nvim_set_keymap('v', '<', '<gv', opts)
 vim.api.nvim_set_keymap('v', '>', '>gv', opts)
+
 vim.api.nvim_set_keymap('n', 'd_', 'dt_', opts)
 
 vim.api.nvim_set_keymap('n', '<leader>{', '{zb', opts)
@@ -53,6 +54,7 @@ vim.api.nvim_set_keymap('n', '<leader>]', '}zt', opts)
 vim.api.nvim_set_keymap('n', '<leader>o', ':only<cr>', opts)
 vim.api.nvim_set_keymap('n', '<leader>h', ':split<cr>', opts)
 vim.api.nvim_set_keymap('n', '<leader>v', ':vsplit<cr>', opts)
+vim.api.nvim_set_keymap('n', '<leader>q', ':q<cr>', opts)
 
 vim.api.nvim_set_keymap('n', '<leader>e', ':e <C-r><C-p><CR>', opts);
 vim.api.nvim_set_keymap('n', '<leader>E', ':q | e <C-r><C-p><CR>', opts);
