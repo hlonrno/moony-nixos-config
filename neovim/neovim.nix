@@ -1,9 +1,4 @@
-pkgs:
-let
-  toLua = code: "lua << EOF\n${code}\nEOF\n";
-  toLuaFile = file: "lua << EOF\n${builtins.readFile file}\nEOF\n";
-in
-{
+pkgs: {
   defaultEditor = true;
   viAlias = true;
   vimAlias = true;
@@ -19,13 +14,13 @@ in
     }
     {
       plugin = nvim-treesitter;
-      type = "viml";
-      config = toLuaFile ./plugins/treesitter.lua;
+      type = "lua";
+      config = builtins.readFile ./plugins/treesitter.lua;
     }
     {
       plugin = lazy-lsp-nvim;
-      type = "viml";
-      config = toLuaFile ./plugins/lazy-lsp.lua;
+      type = "lua";
+      config = builtins.readFile ./plugins/lazy-lsp.lua;
     }
     {
       plugin = undotree;
@@ -34,38 +29,38 @@ in
     }
     {
       plugin = ts-comments-nvim;
-      type = "viml";
-      config = toLua "require('ts-comments').setup{}";
+      type = "lua";
+      config = "require('ts-comments').setup{}";
     }
     {
       plugin = todo-comments-nvim;
-      type = "viml";
-      config = toLuaFile ./plugins/todo-comments.lua;
+      type = "lua";
+      config = builtins.readFile ./plugins/todo-comments.lua;
     }
     {
       plugin = oil-nvim;
-      type = "viml";
-      config = toLuaFile ./plugins/oil.lua;
+      type = "lua";
+      config = builtins.readFile ./plugins/oil.lua;
     }
     {
       plugin = telescope-nvim;
-      type = "viml";
-      config = toLuaFile ./plugins/telescope.lua;
+      type = "lua";
+      config = builtins.readFile ./plugins/telescope.lua;
     }
     {
       plugin = nvim-cmp;
-      type = "viml";
-      config = toLuaFile ./plugins/nvim-cmp.lua;
+      type = "lua";
+      config = builtins.readFile ./plugins/nvim-cmp.lua;
     }
     {
       plugin = vim-tmux-navigator;
-      type = "viml";
-      config = toLuaFile ./plugins/vim-tmux-navigator.lua;
+      type = "lua";
+      config = builtins.readFile ./plugins/vim-tmux-navigator.lua;
     }
     {
       plugin = trouble-nvim;
-      type = "viml";
-      config = toLuaFile ./plugins/trouble.lua;
+      type = "lua";
+      config = builtins.readFile ./plugins/trouble.lua;
     }
 
     vim-visual-multi
