@@ -29,8 +29,8 @@
     selection-background = "#484848";
  
     # Window theming 
-    width = "25%";
-    height = "40%";
+    width = "40%";
+    height = "30%";
     background-color = "#323232";
     border-color = "#787878";
     outline-width = 0; # px
@@ -49,7 +49,7 @@
     prompt-text = ">";
     prompt-padding = 7; # px 
     placeholder-text = "search...";
-    num-results = 13;
+    num-results = 9;
 
     ### Behaviour 
     text-cursor = true;
