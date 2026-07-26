@@ -1,14 +1,13 @@
 {
-  description = "Snowie.";
+  description = "Snowie";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-latest.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+
+    home-manager.url = "github:nix-community/home-manager/release-26.05";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { nixpkgs, nixpkgs-latest, nixpkgs-unstable, home-manager, ... }:
@@ -17,13 +16,7 @@
     pkgs = nixpkgs.legacyPackages.${system};
     latest = import nixpkgs-latest magic;
     unstable = import nixpkgs-unstable magic;
-    magic = {
-      inherit system;
-      config.allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
-        "vivaldi"
-        "vivaldi-ffmpeg-codecs"
-      ];
-    };
+    magic = { inherit system; };
   in
   {
 
