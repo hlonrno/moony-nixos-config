@@ -90,10 +90,4 @@ in
     action = ":q | e <C-r><C-p><cr>";
     options = opts;
   }
-  {
-    mode = any-mode;
-    key = "<A-k>";
-    action = ":lua vim.diagnostic.open_float()<cr>";
-    options = opts;
-  }
 ]
