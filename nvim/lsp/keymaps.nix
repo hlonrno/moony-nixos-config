@@ -1,8 +1,16 @@
 [
   {
-    mode = [ "n" "v" "i" ];
-    key = "<A-k>";
+    mode = "n";
+    key = "<A-K>";
     action = ":lua vim.diagnostic.open_float()<cr>";
+  }
+  {
+    key = "<A-k>";
+    action = ":lua vim.diagnostic.jump({count = -1, float = true})<cr>";
+  }
+  {
+    key = "<A-j>";
+    action = ":lua vim.diagnostic.jump({count = 1, float = true})<cr>";
   }
   {
     key = "K";
@@ -38,7 +46,7 @@
   }
   {
     key = "cf";
-    lspBufAction = "format{async = true}";
+    action = ":lua vim.lsp.buf.format({async = true})<cr>";
   }
   {
     key = "<A-.>";

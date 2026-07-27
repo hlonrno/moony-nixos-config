@@ -6,6 +6,5 @@ pkgs: {
 
     # modes
     company
-    # zig-mode
   ];
 }
