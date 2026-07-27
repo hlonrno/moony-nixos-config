@@ -1,5 +1,4 @@
 let
-  any-mode = [ "n" "v" "i" ];
   opts = {
     silent = true;
     noremap = true;
@@ -55,21 +54,21 @@ in
     options = opts;
   }
   {
-    mode = any-mode;
+    mode = [ "n" "v" "i" ];
     key = "<leader>o";
-    action = ":only<cr>";
+    action = "<esc>:only<cr>";
     options = opts;
   }
   {
-    mode = any-mode;
+    mode = [ "n" "v" "i" ];
     key = "<leader>h";
-    action = ":split<cr>";
+    action = "<esc>:split<cr>";
     options = opts;
   }
   {
-    mode = any-mode;
+    mode = [ "n" "v" "i" ];
     key = "<leader>v";
-    action = ":vsplit<cr>";
+    action = "<esc>:vsplit<cr>";
     options = opts;
   }
   {
@@ -88,6 +87,24 @@ in
     mode = "n";
     key = "<leader>E";
     action = ":q | e <C-r><C-p><cr>";
+    options = opts;
+  }
+  {
+    mode = "n";
+    key = ";";
+    action = ":noh<cr>";
+    options = opts;
+  }
+  {
+    mode = "n";
+    key = "<leader>fe";
+    action = ":Oil<cr>";
+    options = opts;
+  }
+  {
+    mode = "n";
+    key = "<leader>tt";
+    action = ":TodoTrouble<cr>";
     options = opts;
   }
 ]
