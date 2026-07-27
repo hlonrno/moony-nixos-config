@@ -1,15 +1,22 @@
 _:
 let
-  wallpaper = "~/.config/home-manager/hyprland/wallpaper.png";
+  wallpaper = toString ./wallpaper.png;
 in
 {
   settings = {
     ipc = "off";
     splash = false;
-    preload = [ wallpaper ];
     wallpaper = [
-      "eDP-1,${wallpaper}"
-      ",${wallpaper}"
+      ''{
+        monitor = eDP-1
+        path = ${wallpaper}
+        fit_mode = cover
+      }''
+      ''{
+        monitor =
+        path = ${wallpaper}
+        fit_mode = cover
+      }''
     ];
   };
 }

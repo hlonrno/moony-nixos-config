@@ -22,8 +22,8 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
 vim.opt.smartcase = true
-vim.opt.splitbelow = true
-vim.opt.splitright = true
+vim.opt.splitbelow = false
+vim.opt.splitright = false
 
 vim.opt.number = true
 vim.opt.numberwidth = 2
