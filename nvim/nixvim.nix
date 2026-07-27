@@ -33,7 +33,7 @@
         { name = "buffer"; }
       ];
       settings.mapping = {
-        "<Tab>" = "cmp.mapping.confirm()";
+        "<Tab>" = "cmp.mapping.confirm({select = true})";
         "<A-k>" = "cmp.mapping.select_prev_item()";
         "<A-j>" = "cmp.mapping.select_next_item()";
         "<A-K>" = "cmp.mapping.scroll_docs(-3)";
