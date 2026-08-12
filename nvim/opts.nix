@@ -1,25 +1,26 @@
 {
   termguicolors = true;
   backup = false;
+  writebackup = false;
   swapfile = false;
-  conceallevel = 0;
+  conceallevel = 0; # none
   fileencoding = "utf-8";
   ignorecase = true;
+  smartcase = true;
   wrap = false;
   colorcolumn = [ 80 ];
-  expandtab = true;
   showmode = false;
 
-  showtabline = 0;
+  expandtab = false;
+  virtualedit = "all";
+  showtabline = 0; # never
   smartindent = true;
-  softtabstop = 4;
+  smarttab = true;
+  softtabstop = 0;
   tabstop = 4;
   shiftwidth = 4;
-  smarttab = true;
-  smartcase = true;
 
   number = true;
-  numberwidth = 3;
   relativenumber = true;
   signcolumn = "yes";
 }

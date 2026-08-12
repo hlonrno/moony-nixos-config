@@ -53,18 +53,18 @@
     };
   };
 
+  opts = import ./opts.nix;
+  keymaps = import ./keymaps.nix;
   lsp.keymaps = import ./lsp/keymaps.nix;
   lsp.servers = {
     nixd.enable = true;
     lua_ls.enable = true;
     clangd.enable = true;
     jdtls.enable = true;
+    zls.enable = true;
     marksman.enable = true;
   };
 
-  opts = import ./opts.nix;
-  keymaps = import ./keymaps.nix;
-  
   extraConfigLua = ''
     vim.o.updatetime = 100;
 
@@ -73,5 +73,7 @@
     table.insert(vim.lsp.config['jdtls'].root_markers, extraRootMarkers)
     table.insert(vim.lsp.config['marksman'].root_markers, extraRootMarkers)
     table.insert(vim.lsp.config['nixd'].root_markers, extraRootMarkers)
+    table.insert(vim.lsp.config['zls'].root_markers, extraRootMarkers)
+    vim.cmd('autocmd BufRead *.nix set tabstop=2 | set expandtab')
   '';
 }
