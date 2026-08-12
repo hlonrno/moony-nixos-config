@@ -16,6 +16,7 @@ in
     radeontop
     jujutsu
     jjui
+    yazi
     jq
     gcc
     grc

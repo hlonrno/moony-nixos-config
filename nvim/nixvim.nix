@@ -66,6 +66,8 @@
   keymaps = import ./keymaps.nix;
   
   extraConfigLua = ''
+    vim.o.updatetime = 100;
+
     local extraRootMarkers = { '.jj', 'Makefile', 'shell.nix', 'src' }
     table.insert(vim.lsp.config['clangd'].root_markers, extraRootMarkers)
     table.insert(vim.lsp.config['jdtls'].root_markers, extraRootMarkers)
