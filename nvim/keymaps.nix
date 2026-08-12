@@ -107,4 +107,10 @@ in
     action = ":TodoTrouble<cr>";
     options = opts;
   }
+  {
+    mode = "n";
+    key = "<leader>m";
+    action = ":!!<cr>";
+    options = { noremap = true; };
+  }
 ]
