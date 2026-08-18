@@ -17,6 +17,7 @@ in
     jujutsu
     jjui
     yazi
+    nixfmt
     jq
     gcc
     grc
@@ -31,6 +32,7 @@ in
     hyprshot
     hyprpicker
     gimp
+    playerctl
   ];
 
   # wayland.windowManager.hyprland = enable (import ./hyprland/hyprland.nix pkgs);

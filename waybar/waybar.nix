@@ -1,4 +1,5 @@
 _: {
+  style = ./style.css;
   settings = {
     mainBar = {
       layer = "top";
@@ -90,6 +91,4 @@ _: {
       };
     };
   };
-
-  style = ./style.css;
 }
