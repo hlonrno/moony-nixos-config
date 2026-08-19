@@ -4,7 +4,7 @@
 
   environment.systemPackages = with pkgs; [
     neovim
-    haruna
+    haruna yt-dlp
     loupe
     nautilus
     speedcrunch
