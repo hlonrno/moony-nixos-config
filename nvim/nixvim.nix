@@ -66,7 +66,7 @@
   };
 
   extraConfigLua = ''
-    vim.o.updatetime = 100;
+    vim.o.updatetime = 180;
 
     local extraRootMarkers = { '.jj', 'Makefile', 'shell.nix', 'src' }
     table.insert(vim.lsp.config['clangd'].root_markers, extraRootMarkers)

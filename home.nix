@@ -18,6 +18,7 @@ in
     jjui
     yazi
     nixfmt
+    zig
     jq
     gcc
     grc
