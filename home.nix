@@ -18,7 +18,8 @@ in
     jjui
     yazi
     nixfmt
-    zig
+    aria2
+    odin
     jq
     gcc
     grc
