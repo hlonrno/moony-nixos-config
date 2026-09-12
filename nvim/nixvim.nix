@@ -61,7 +61,7 @@
     lua_ls.enable = true;
     clangd.enable = true;
     jdtls.enable = true;
-    zls.enable = true;
+    ols.enable = true;
     marksman.enable = true;
   };
 
