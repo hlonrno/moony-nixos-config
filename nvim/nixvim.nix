@@ -63,6 +63,9 @@
     jdtls.enable = true;
     ols.enable = true;
     marksman.enable = true;
+    hyprls.enable = true;
+    omnisharp.enable = true; # probably removing this after school ends
+    sqls.enable = true; # probably removing this after school ends
   };
 
   extraConfigLua = ''
