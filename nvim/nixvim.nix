@@ -77,6 +77,6 @@
     table.insert(vim.lsp.config['marksman'].root_markers, extraRootMarkers)
     table.insert(vim.lsp.config['nixd'].root_markers, extraRootMarkers)
     table.insert(vim.lsp.config['zls'].root_markers, extraRootMarkers)
-    vim.cmd('autocmd BufRead *.nix set tabstop=2 | set expandtab')
+    vim.cmd('autocmd BufRead *.nix set tabstop=2 expandtab shiftwidth=2')
   '';
 }
