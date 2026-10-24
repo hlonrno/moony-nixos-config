@@ -61,22 +61,22 @@
     lua_ls.enable = true;
     clangd.enable = true;
     jdtls.enable = true;
-    ols.enable = true;
+    ocamllsp.enable = true;
+    elixirls.enable = true;
     marksman.enable = true;
     hyprls.enable = true;
-    omnisharp.enable = true; # probably removing this after school ends
-    sqls.enable = true; # probably removing this after school ends
+    csharp_ls.enable = true;
   };
 
   extraConfigLua = ''
-    vim.o.updatetime = 180;
+    vim.o.updatetime = 200;
 
     local extraRootMarkers = { '.jj', 'Makefile', 'shell.nix', 'src' }
     table.insert(vim.lsp.config['clangd'].root_markers, extraRootMarkers)
     table.insert(vim.lsp.config['jdtls'].root_markers, extraRootMarkers)
     table.insert(vim.lsp.config['marksman'].root_markers, extraRootMarkers)
     table.insert(vim.lsp.config['nixd'].root_markers, extraRootMarkers)
-    table.insert(vim.lsp.config['zls'].root_markers, extraRootMarkers)
+    table.insert(vim.lsp.config['ocamllsp'].root_markers, extraRootMarkers)
     vim.cmd('autocmd BufRead *.nix set tabstop=2 expandtab shiftwidth=2')
   '';
 }
