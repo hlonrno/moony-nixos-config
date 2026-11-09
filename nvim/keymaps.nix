@@ -54,19 +54,19 @@ in
     options = opts;
   }
   {
-    mode = [ "n" "v" "i" ];
+    mode = "n";
     key = "<leader>o";
     action = "<esc>:only<cr>";
     options = opts;
   }
   {
-    mode = [ "n" "v" "i" ];
+    mode = "n";
     key = "<leader>h";
     action = "<esc>:split<cr>";
     options = opts;
   }
   {
-    mode = [ "n" "v" "i" ];
+    mode = "n";
     key = "<leader>v";
     action = "<esc>:vsplit<cr>";
     options = opts;
@@ -106,6 +106,12 @@ in
     key = "<leader>tt";
     action = ":TodoTrouble<cr>";
     options = opts;
+  }
+  {
+    mode = "n";
+    key = "<leader>x";
+    action = ":HexToggle<cr>";
+    options = { noremap = true; };
   }
   {
     mode = "n";
